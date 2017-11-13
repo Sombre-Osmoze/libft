@@ -1,9 +1,13 @@
-//
-//  ft_memccpy.c
-//  libft
-//
-//  Created by Marcus Florentin on 10/11/2017.
-//  Copyright © 2017 Marcus Florentin. All rights reserved.
-//
+#include <string.h>
 
-#include <stdio.h>
+void *ft_memccpy(unsigned char *dst, const unsigned char *src, int c, size_t n)
+{
+
+
+
+
+
+
+
+	return (NULL);
+}

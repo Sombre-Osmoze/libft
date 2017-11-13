@@ -9,6 +9,5 @@ void *ft_memcpy(char *dst, const char *src, size_t n)
 		dst[c] = src[c];
 		c++;
 	}
-
 	return (dst);
 }
