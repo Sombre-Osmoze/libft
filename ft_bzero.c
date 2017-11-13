@@ -8,5 +8,5 @@ void ft_bzero(void *s, size_t n)
 	s_p = s;
 	i = 0;
 	while (i < n)
-			s_p[i++] = 'o' ;
+			s_p[i++] = '0' ;
 }

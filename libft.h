@@ -13,8 +13,8 @@
 
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(char *s, size_t n);
-void	*ft_memcpy(char *dst, const char *src, size_t n);
-void	*ft_memccpy(unsigned char *dst, const unsigned char *src, int c, size_t n);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 
 
 #endif /* libft_h */
