@@ -1,6 +1,6 @@
 #include <string.h>
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	int i;
 	char *s_p;
@@ -8,5 +8,5 @@ void ft_bzero(void *s, size_t n)
 	s_p = s;
 	i = 0;
 	while (i < n)
-			s_p[i++] = '0' ;
+			s_p[i++] = '\0';
 }
