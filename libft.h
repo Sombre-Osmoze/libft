@@ -15,7 +15,7 @@
 
 # include <string.h>
 
-# define NBFT  14
+# define NBFT  20
 
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(char *s, size_t n);
@@ -33,5 +33,6 @@ char	*ft_strncat(char *s1, const char *s2, size_t n);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 char	*ft_stchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
+char	*ft_strstr(const char *haystack, const char *needle);
 
 #endif

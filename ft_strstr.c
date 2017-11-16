@@ -1,37 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marcusflorentin <marvin@42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/15 11:18:52 by marcusflo         #+#    #+#             */
-/*   Updated: 2017/11/15 17:10:17 by marcusflo        ###   ########.fr       */
+/*   Created: 2017/11/16 19:59:44 by marcusflo         #+#    #+#             */
+/*   Updated: 2017/11/16 19:59:48 by marcusflo        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include <stdlib.h>
+#include <string.h>
 
-void				*ft_memccpy(void *dst, const void *src, int c, size_t n)
+char	*ft_strstr(const char *haystack, const char *needle)
 {
-	size_t			i;
-	int				find;
-	unsigned char	*src_p;
-	unsigned char	*dst_p;
+	char	*buff;
+	size_t	i;
 
-	i = 0;
-	find = 0;
-	src_p = (unsigned char *)src;
-	dst_p = dst;
-	while (i < n && !find)
+	buff = NULL;
+	if (*needle == '\0')
+		return ((char *)haystack);
+	while (*haystack && buff == NULL)
 	{
-		if (src_p[i] == (unsigned char)c)
-			find = 1;
-		*dst_p++ = (unsigned char)src_p[i];
-		i++;
+		if (*haystack == *needle)
+		{
+			buff = (char *)haystack;
+			i = 0;
+			while (needle[i] != '\0' && buff != NULL)
+			{
+				if (*buff != needle[i])
+					buff = NULL;
+				i++;
+				buff++;
+			}
+		}
+		haystack++;
 	}
-	if (!find)
-		return (NULL);
-	return (dst_p);
+	return (buff);
 }
