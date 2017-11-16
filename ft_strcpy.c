@@ -1,37 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marcusflorentin <marvin@42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/16 12:25:34 by marcusflo         #+#    #+#             */
-/*   Updated: 2017/11/16 12:25:35 by marcusflo        ###   ########.fr       */
+/*   Created: 2017/11/16 12:34:01 by marcusflo         #+#    #+#             */
+/*   Updated: 2017/11/16 12:34:02 by marcusflo        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
-#include <stdlib.h>
 
-char	*ft_strdup(const char *s1)
+char	*ft_strcpy(char *dst, const char *src)
 {
-	char	*cpy;
 	size_t	i;
 
 	i = 0;
-	cpy = NULL;
-	while (s1[i] != '\0')
-		i++;
-	cpy = malloc(sizeof(char) * i + 1);
-	if (cpy != NULL)
+	while (src[i] != '\0')
 	{
-		i = 0;
-		while (s1[i] != '\0')
-		{
-			cpy[i] = s1[i];
-			i++;
-		}
-		cpy[i] = '\0';
+		dst[i] = src[i];
+		i++;
 	}
-	return (cpy);
+	return (dst);
 }
