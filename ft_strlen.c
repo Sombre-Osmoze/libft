@@ -1,37 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marcusflorentin <marvin@42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/15 11:18:52 by marcusflo         #+#    #+#             */
-/*   Updated: 2017/11/15 17:10:17 by marcusflo        ###   ########.fr       */
+/*   Created: 2017/11/16 12:19:12 by marcusflo         #+#    #+#             */
+/*   Updated: 2017/11/16 12:19:14 by marcusflo        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
-#include <stdlib.h>
 
-void				*ft_memccpy(void *dst, const void *src, int c, size_t n)
+size_t	ft_strlen(const char *s)
 {
-	size_t			i;
-	int				find;
-	unsigned char	*src_p;
-	unsigned char	*dst_p;
+	size_t len;
 
-	i = 0;
-	find = 0;
-	src_p = (unsigned char *)src;
-	dst_p = dst;
-	while (i < n && !find)
-	{
-		if (src_p[i] == c)
-			find = 1;
-		*dst_p++ = (unsigned char)src_p[i];
-		i++;
-	}
-	if (!find)
-		return (NULL);
-	return (dst_p);
+	len = 0;
+	while (s[len] != '\0')
+		len++;
+	return (len);
 }
