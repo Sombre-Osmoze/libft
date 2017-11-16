@@ -21,6 +21,7 @@ char	*ft_strncat(char *s1, const char *s2, size_t n)
 	len = 0;
 	while (s1[len] != '\0')
 		len++;
+	len--;
 	while (s2[i] != '\0' && i < n)
 	{
 		s1[len] = s2[i];
