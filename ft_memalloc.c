@@ -26,7 +26,7 @@ void	*ft_memalloc(size_t size)
 	{
 		set_buff = new_buff;
 		while (i < size)
-			*set_buff = '\0';
+			set_buff[i++] = '\0';
 	}
 	return (new_buff);
 }
