@@ -44,12 +44,12 @@ SRC		= 	ft_atoi.c \
 					ft_strstr.c \
 					ft_tolower.c \
 					ft_toupper.c \
-					ft_striter \
-					ft_strclr \
+					ft_striter.c \
+					ft_strclr.c \
 
 OBJS	=	$(SRC:.c=.o)
 
-RM			=		rm -f
+RM		=		rm -f
 
 CFLAGS	=	-Wall -Wextra -Werror
 
