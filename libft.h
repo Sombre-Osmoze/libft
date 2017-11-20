@@ -57,5 +57,4 @@ char	*ft_strmap(const char *s, char (*f)(char));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int		ft_strequ(const char *s1, const char *s2);
 
-
 #endif
