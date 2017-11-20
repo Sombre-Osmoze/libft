@@ -49,6 +49,7 @@ SRC		= 	ft_atoi.c \
 					ft_striteri.c \
 					ft_strmap.c \
 					ft_strmapi.c \
+					ft_strequ.c \
 
 OBJS	=	$(SRC:.c=.o)
 
