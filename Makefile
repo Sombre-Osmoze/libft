@@ -46,6 +46,7 @@ SRC		= 	ft_atoi.c \
 					ft_toupper.c \
 					ft_striter.c \
 					ft_strclr.c \
+					ft_striteri.c \
 
 OBJS	=	$(SRC:.c=.o)
 
