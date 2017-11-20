@@ -57,5 +57,7 @@ char	*ft_strmap(const char *s, char (*f)(char));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int		ft_strequ(const char *s1, const char *s2);
 int		ft_strenqu(const char *s1, const char *s2, size_t n);
+char	*ft_strsub(const char *s, unsigned int start, size_t len);
+char	*ft_strjoin(const char *s1, const char *s2);
 
 #endif

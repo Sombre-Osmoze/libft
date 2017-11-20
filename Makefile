@@ -37,6 +37,7 @@ SRC		= 	ft_atoi.c \
 			ft_strequ.c \
 			ft_striter.c \
 			ft_striteri.c \
+			ft_strjoin.c \
 			ft_strlcat.c \
 			ft_strlen.c \
 			ft_strmap.c \
@@ -49,6 +50,7 @@ SRC		= 	ft_atoi.c \
 			ft_strnstr.c \
 			ft_strrchr.c \
 			ft_strstr.c \
+			ft_strsub.c \
 			ft_tolower.c \
 			ft_toupper.c \
 
