@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marcusflorentin <marvin@42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/16 13:38:36 by marcusflo         #+#    #+#             */
-/*   Updated: 2017/11/16 13:38:37 by marcusflo        ###   ########.fr       */
+/*   Created: 2017/11/20 10:09:44 by marcusflo         #+#    #+#             */
+/*   Updated: 2017/11/20 10:09:51 by marcusflo        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <stdlib.h>
 
-char	*ft_strcat(char *s1, char *s2)
+char	*ft_strmap(const char *s, char (*f)(char))
 {
-	size_t	i;
-	size_t	len;
+	char	*new_str;
+	int		i;
 
+	new_str = NULL;
 	i = 0;
-	len = 0;
-	while (s1[len] != '\0')
-		len++;
-	while (s2[i] != '\0')
-	{
-		s1[len] = s2[i];
-		len++;
+	while (s[i] != '\0')
 		i++;
+	new_str = malloc(sizeof(char) * i + 1);
+	i = 0;
+	if (new_str != NULL)
+	{
+		while (s[i] != '\0')
+		{
+			new_str[i] = (f)(s[i]);
+			i++;
+		}
+		new_str[i] = '\0';
 	}
-	s1[len] = '\0';
-	return (s1);
+	return (new_str);
 }
