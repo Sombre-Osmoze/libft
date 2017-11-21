@@ -62,5 +62,6 @@ char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_strtrim(const char *s);
 void	ft_strswp(char *s1, char *s2);
 void	ft_strnswp(char *s1, char *s2, int n);
+void	ft_strlswp(char *s1, char *s2);
 
 #endif

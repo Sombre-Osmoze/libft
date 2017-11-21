@@ -12,7 +12,7 @@
 
 NAME	=	libft.a
 
-SRC		= 	ft_atoi.c \
+SRC		=	ft_atoi.c \
 			ft_bzero.c \
 			ft_isalnum.c \
 			ft_isalpha.c \
@@ -40,6 +40,7 @@ SRC		= 	ft_atoi.c \
 			ft_strjoin.c \
 			ft_strlcat.c \
 			ft_strlen.c \
+			ft_strlswp.c \
 			ft_strmap.c \
 			ft_strmapi.c \
 			ft_strncat.c \
@@ -48,7 +49,7 @@ SRC		= 	ft_atoi.c \
 			ft_strnequ.c \
 			ft_strnew.c \
 			ft_strnstr.c \
-			ft_strnswap.c \
+			ft_strnswp.c \
 			ft_strrchr.c \
 			ft_strsplit.c \
 			ft_strstr.c \
