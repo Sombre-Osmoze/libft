@@ -15,7 +15,7 @@
 char		**ft_strsplit(const char *s, char c)
 {
 	char	**str_split;
-
+	c = *s;
 	str_split = NULL;
 	return (str_split);
 }

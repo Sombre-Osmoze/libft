@@ -68,7 +68,7 @@ CFLAGS	=	-Wall -Wextra -Werror
 $(NAME)	:	$(OBJS)
 		ar rc $(NAME) $(OBJS)
 
-all				:		$(NAME)
+all		:		$(NAME)
 
 clean	:
 		$(RM) $(OBJS)
@@ -76,4 +76,4 @@ clean	:
 fclean	:		clean
 		$(RM) $(NAME)
 
-re				:		fclean all
+re		:		fclean all
