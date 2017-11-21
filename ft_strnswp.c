@@ -12,8 +12,8 @@
 
 void	ft_strnswp(char *s1, char *s2, int n)
 {
-	char c;
-	int i;
+	char	c;
+	int		i;
 
 	i = 0;
 	while (s1[i] && s2[i])
