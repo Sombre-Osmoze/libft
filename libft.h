@@ -60,5 +60,6 @@ int		ft_strenqu(const char *s1, const char *s2, size_t n);
 char	*ft_strsub(const char *s, unsigned int start, size_t len);
 char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_strtrim(const char *s);
+void	ft_strswp(char *s1, char *s2);
 
 #endif
