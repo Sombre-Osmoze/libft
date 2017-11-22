@@ -6,7 +6,7 @@
 /*   By: marcusflorentin <marvin@42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 20:32:47 by marcusflo         #+#    #+#             */
-/*   Updated: 2017/11/20 10:33:33 by marcusflo        ###   ########.fr       */
+/*   Updated: 2017/11/22 23:18:51 by mflorent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char			*ft_strncpy(char *dst, const char *src, size_t len);
 char			*ft_strcat(char *s1, char *s2);
 char			*ft_strncat(char *s1, const char *s2, size_t n);
 size_t			ft_strlcat(char *dst, const char *src, size_t dstsize);
-char			*ft_stchr(const char *s, int c);
+char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
 char			*ft_strstr(const char *haystack, const char *needle);
 char			*ft_strnstr(const char *hayst, const char *needle, size_t len);
@@ -83,6 +83,7 @@ t_list			*ft_lstnew(void const *content, size_t content_size);
 void			ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void			ft_lstadd(t_list **alst, t_list *new);
+void			ft_putnbr(int nb);
 
 
 #endif
