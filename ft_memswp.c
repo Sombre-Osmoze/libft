@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strswp.c                                        :+:      :+:    :+:   */
+/*   ft_memswp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marcusflorentin <marvin@42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/21 21:09:50 by marcusflo         #+#    #+#             */
-/*   Updated: 2017/11/21 21:09:52 by marcusflo        ###   ########.fr       */
+/*   Created: 2017/11/21 22:01:04 by marcusflo         #+#    #+#             */
+/*   Updated: 2017/11/21 22:01:06 by marcusflo        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_strswp(char *s1, char *s2)
-{
-	char c;
+#include <string.h>
 
-	while (*s1 || *s2)
+void	ft_memswp(void *a, void *b, size_t len)
+{
+	size_t			i;
+	unsigned char	tmp;
+	unsigned char	*a_p;
+	unsigned char	*b_p;
+
+	i = 0;
+	a_p = (unsigned char *)a;
+	b_p = (unsigned char *)b;
+	while (i < len)
 	{
-		c = *s1;
-		*s1 = *s2;
-		*s2 = c;
-		s1++;
-		s2++;
+		tmp = *a_p;
+		*a_p = *b_p;
+		*b_p = tmp;
+		i++;
 	}
 }

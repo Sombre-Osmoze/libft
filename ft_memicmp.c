@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strswp.c                                        :+:      :+:    :+:   */
+/*   ft_memicmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marcusflorentin <marvin@42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/21 21:09:50 by marcusflo         #+#    #+#             */
-/*   Updated: 2017/11/21 21:09:52 by marcusflo        ###   ########.fr       */
+/*   Created: 2017/11/22 13:55:43 by marcusflo         #+#    #+#             */
+/*   Updated: 2017/11/22 13:55:45 by marcusflo        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_strswp(char *s1, char *s2)
-{
-	char c;
+#include <string.h>
 
-	while (*s1 || *s2)
+size_t	ft_memicmp(const char *s1, const char *s2, size_t len)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < len)
 	{
-		c = *s1;
-		*s1 = *s2;
-		*s2 = c;
-		s1++;
-		s2++;
+		if (s1[i] != s2[i])
+			return (i);
+		i++;
 	}
+	return (len);
 }

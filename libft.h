@@ -63,5 +63,10 @@ char	*ft_strtrim(const char *s);
 void	ft_strswp(char *s1, char *s2);
 void	ft_strnswp(char *s1, char *s2, int n);
 void	ft_strlswp(char *s1, char *s2);
+void	ft_memswp(void *a, void *b, size_t len);
+size_t	ft_memicmp(const char *s1, const char *s2, size_t len);
+char	*ft_itoa(int n);
+char	**ft_strsplit(char const *s, char c);
+void	ft_putchar(char c);
 
 #endif
