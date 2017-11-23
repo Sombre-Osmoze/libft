@@ -6,7 +6,7 @@
 #    By: marcusflorentin <marvin@42.fr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/18 21:56:48 by marcusflo         #+#    #+#              #
-#    Updated: 2017/11/18 21:56:52 by marcusflo        ###   ########.fr        #
+#    Updated: 2017/11/23 16:56:44 by mflorent         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,6 +75,7 @@ SRC		=	ft_atoi.c \
 			ft_strtrim.c \
 			ft_tolower.c \
 			ft_toupper.c \
+
 OBJS	=	$(SRC:.c=.o)
 
 RM		=		rm -f

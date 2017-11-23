@@ -6,35 +6,35 @@
 /*   By: marcusflorentin <marvin@42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 11:18:27 by marcusflo         #+#    #+#             */
-/*   Updated: 2017/11/15 11:18:29 by marcusflo        ###   ########.fr       */
+/*   Updated: 2017/11/23 16:55:06 by mflorent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void		*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t			i;
-	int				inf;
-	unsigned char	*src_p;
-	unsigned char	*dst_p;
+	char	*str1;
+	char	*str2;
 
-	i = 0;
-	inf = 0;
-	src_p = (unsigned char *)src;
-	dst_p = dst;
-	if (*src_p < *dst_p)
+	str1 = (char *)dst;
+	str2 = (char *)src;
+	if (len == 0)
+		return (dst);
+	if (str2 < str1)
 	{
-		inf = 1;
-		i = len - 1;
+		str1 = str1 + len - 1;
+		str2 = str2 + len - 1;
+		while (len-- > 0)
+			*str1-- = *str2--;
 	}
-	while (i < len || len != 0)
+	else
 	{
-		dst_p[i] = src_p[i];
-		if (inf)
-			i--;
-		else
-			i++;
+		while (len > 0)
+		{
+			*str1++ = *str2++;
+			len--;
+		}
 	}
 	return (dst);
 }
