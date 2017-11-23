@@ -29,13 +29,10 @@ int					ft_atoi(char *str)
 	{
 		nb = nb * 10;
 		nb = nb + (str[i++] - 48);
-		if (nb > 9223372036854775807)
-		{
-			if (sign < 0)
-				return (0);
-			else if (sign > 0)
-				return (-1);
-		}
+		if (sign < 0 && nb > 9223372036854775807)
+			return (0);
+		if (sign > 0 && nb > 9223372036854775807)
+			return (-1);
 	}
-	return (nb * sign);
+	return ((int)(nb * sign));
 }
