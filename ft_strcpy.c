@@ -6,7 +6,7 @@
 /*   By: marcusflorentin <marvin@42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/16 12:34:01 by marcusflo         #+#    #+#             */
-/*   Updated: 2017/11/16 12:34:02 by marcusflo        ###   ########.fr       */
+/*   Updated: 2017/11/22 23:29:18 by mflorent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ char	*ft_strcpy(char *dst, const char *src)
 		dst[i] = src[i];
 		i++;
 	}
+	dst[i] = '\0';
 	return (dst);
 }

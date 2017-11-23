@@ -6,7 +6,7 @@
 /*   By: marcusflorentin <marvin@42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 15:07:04 by marcusflo         #+#    #+#             */
-/*   Updated: 2017/11/17 15:07:10 by marcusflo        ###   ########.fr       */
+/*   Updated: 2017/11/23 15:35:26 by mflorent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	while ((*s1 || *s2) && i < n)
 	{
 		if (*s1 != *s2)
-			return (*s1 - *s1);
+			return ((unsigned char)*s1 - (unsigned char)*s2);
 		s1++;
 		s2++;
 		n++;
