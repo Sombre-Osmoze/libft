@@ -6,15 +6,15 @@
 /*   By: marcusflorentin <marvin@42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/17 15:16:15 by marcusflo         #+#    #+#             */
-/*   Updated: 2017/11/23 17:19:24 by mflorent         ###   ########.fr       */
+/*   Updated: 2017/11/23 17:26:26 by mflorent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char *str)
+int					ft_atoi(char *str)
 {
-	int i;
-	int nb;
-	int sign;
+	int				i;
+	unsigned long	nb;
+	int				sign;
 
 	i = 0;
 	nb = 0;
@@ -30,10 +30,12 @@ int	ft_atoi(char *str)
 		nb = nb * 10;
 		nb = nb + (str[i++] - 48);
 		if (nb > 9223372036854775807)
+		{
 			if (sign < 0)
 				return (0);
 			else if (sign > 0)
 				return (-1);
+		}
 	}
 	return (nb * sign);
 }
