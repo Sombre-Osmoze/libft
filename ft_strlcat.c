@@ -31,5 +31,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		i++;
 	}
 	dst[len] = '\0';
+	if (len > dstsize)
+		return (dstsize);
 	return (len - i);
 }
