@@ -28,7 +28,6 @@ char	*ft_strstr(const char *haystack, const char *needle)
 			buff = (char *)haystack;
 			i = 0;
 			while (needle[i] != '\0' && buff != NULL)
-			{
 				if (*buff != needle[i])
 					buff = NULL;
 				else
@@ -36,7 +35,6 @@ char	*ft_strstr(const char *haystack, const char *needle)
 					i++;
 					buff++;
 				}
-			}
 		}
 		haystack++;
 	}
