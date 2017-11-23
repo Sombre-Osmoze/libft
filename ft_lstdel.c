@@ -22,7 +22,6 @@ void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 	while (p_curr->next != NULL)
 	{
 		(del)(p_curr->content, p_curr->content_size);
-		free(p_curr);
 		p_curr = p_curr->next;
 	}
 	(*alst) = NULL;
