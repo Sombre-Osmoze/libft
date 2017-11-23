@@ -12,10 +12,10 @@
 
 #include <string.h>
 
-void		ft_bzero(void *s, size_t n)
+void				ft_bzero(void *s, size_t n)
 {
-	size_t	i;
-	char	*s_p;
+	unsigned int	i;
+	char			*s_p;
 
 	s_p = (char *)s;
 	i = 0;
