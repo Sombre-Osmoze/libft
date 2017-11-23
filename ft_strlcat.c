@@ -19,7 +19,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	len;
 
 	i = 0;
-	len = strlen(dst);
+	len = ft_strlen(dst);
 	if (dstsize == 0 || *dst == '\0')
 		return (ft_strlen(src));
 	if (*src == '\0')
