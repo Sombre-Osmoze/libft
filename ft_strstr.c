@@ -6,7 +6,7 @@
 /*   By: marcusflorentin <marvin@42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/16 19:59:44 by marcusflo         #+#    #+#             */
-/*   Updated: 2017/11/16 19:59:48 by marcusflo        ###   ########.fr       */
+/*   Updated: 2017/11/22 23:41:39 by mflorent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,11 @@ char	*ft_strstr(const char *haystack, const char *needle)
 			{
 				if (*buff != needle[i])
 					buff = NULL;
-				i++;
-				buff++;
+				else
+				{
+					i++;
+					buff++;
+				}
 			}
 		}
 		haystack++;
