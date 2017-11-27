@@ -21,11 +21,11 @@ char	*ft_strsub(const char *s, unsigned int start, size_t len)
 	new_str = NULL;
 	i = 0;
 	new_str = malloc(sizeof(char) * len + 1);
-	if (new_str != NULL)
+	if (new_str != NULL || s != NULL)
 	{
 		while (s[start] || i < len)
 		{
-			new_str[start] = s[start];
+			new_str[i] = s[start];
 			start++;
 			i++;
 		}
