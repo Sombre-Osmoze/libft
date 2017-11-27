@@ -11,15 +11,19 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdlib.h>
 
 void	ft_putendl(const char *s)
 {
 	char	c;
 
 	c = '\n';
-	while (*s)
+	if (s != NULL)
 	{
-		write(1, s++, 1);
+		while (*s)
+		{
+			write(1, s++, 1);
+		}
+		write(1, &c, 1);
 	}
-	write(1, &c, 1);
 }

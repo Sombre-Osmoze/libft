@@ -22,7 +22,6 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	new_mail = malloc(sizeof(t_list));
 	if (new_mail != NULL)
 	{
-		new_mail->next = NULL;
 		if (content != NULL)
 		{
 			new_mail->content = malloc(sizeof(content_size));
@@ -32,7 +31,10 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 				new_mail->content_size = 0;
 		}
 		else
+		{
+			new_mail->next = NULL;
 			new_mail->content_size = 0;
+		}
 	}
 	return (new_mail);
 }

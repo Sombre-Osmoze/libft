@@ -25,8 +25,7 @@ char	*ft_strsub(const char *s, unsigned int start, size_t len)
 	{
 		while (s[start] || i < len)
 		{
-			new_str[i] = s[start];
-			start++;
+			new_str[i] = s[start + i];
 			i++;
 		}
 		new_str[start] = '\0';
