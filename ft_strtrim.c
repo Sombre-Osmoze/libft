@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eparisot <eparisot@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mflorent <mflorent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/29 15:40:59 by eparisot          #+#    #+#             */
-/*   Updated: 2017/11/20 21:34:34 by eparisot         ###   ########.fr       */
+/*   Created: 2017/10/29 15:40:59 by mflorent          #+#    #+#             */
+/*   Updated: 2017/11/20 21:34:34 by mflorent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static int	c_count(char const *s)
 	int	j;
 
 	i = 0;
-	j = ft_strlen(s) - 1;
+	j = (int)ft_strlen(s) - 1;
 	while (is_blank(s[i]))
 		i++;
 	while (is_blank(s[j]))
