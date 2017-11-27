@@ -3,53 +3,59 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marcusflorentin <marvin@42.fr>             +#+  +:+       +#+        */
+/*   By: eparisot <eparisot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/20 18:23:18 by marcusflo         #+#    #+#             */
-/*   Updated: 2017/11/20 18:23:19 by marcusflo        ###   ########.fr       */
+/*   Created: 2017/10/29 15:40:59 by eparisot          #+#    #+#             */
+/*   Updated: 2017/11/20 21:34:34 by eparisot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdlib.h>
 
-static void	ft_str_dlen(const char *s, int comp[2])
+static int	is_blank(char c)
 {
-	int i;
-
-	i = 0;
-	while (i < 2)
-		comp[i++] = -1;
-	i = 0;
-	while (s[i] != '\0')
-	{
-		if (s[i] != '\n' && s[i] != '\t' && s[i] != ' ')
-		{
-			if (comp[0] == -1)
-				comp[0] = i;
-			else if (!(s[i + 1] != '\n' && s[i + 1] != '\t' && s[i + 1] != ' '))
-				comp[1] = i;
-		}
-		i++;
-	}
+	if (c == ' ' || c == '\n' || c == '\t')
+		return (1);
+	return (0);
 }
 
-char		*ft_strtrim(const char *s)
+static int	c_count(char const *s)
 {
-	char	*new_str;
-	int		i;
-	int		comp[2];
+	int	i;
+	int	j;
 
-	new_str = NULL;
 	i = 0;
-	ft_str_dlen(s, comp);
-	new_str = malloc(sizeof(char) * (comp[0] - comp[1] + 2));
-	if (new_str != NULL)
-	{
-		while (comp[0] <= comp[1])
-		{
-			new_str[i++] = s[comp[0]++];
-		}
-		new_str[i] = '\0';
-	}
-	return (new_str);
+	j = ft_strlen(s) - 1;
+	while (is_blank(s[i]))
+		i++;
+	while (is_blank(s[j]))
+		j--;
+	if (j - i < 0)
+		return (0);
+	return ((j - i) + 1);
+}
+
+char		*ft_strtrim(char const *s)
+{
+	char	*new;
+	int		i;
+	int		n;
+
+	i = 0;
+	n = 0;
+	if (!s)
+		return (NULL);
+	new = (char *)malloc(sizeof(char) * (c_count(s) + 1));
+	if (new == NULL)
+		return (NULL);
+	while (is_blank(s[i]))
+		i++;
+	while (s[i])
+		new[n++] = s[i++];
+	n--;
+	while (is_blank(new[n]))
+		n--;
+	new[++n] = '\0';
+	return (new);
 }
