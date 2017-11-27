@@ -17,9 +17,12 @@ void	ft_putendl_fd(const char *s, int fd)
 	char	c;
 
 	c = '\n';
-	while (*s)
+	if (s != NULL)
 	{
-		write(fd, s++, 1);
+		while (*s)
+		{
+			write(fd, s++, 1);
+		}
+		write(fd, &c, 1);
 	}
-	write(fd, &c, 1);
 }
