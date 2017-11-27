@@ -11,19 +11,19 @@
 /* ************************************************************************** */
 
 #include <string.h>
+#include <stdlib.h>
 
 int	ft_strnequ(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
 
 	i = 0;
-	while ((*s1 || *s2) && i < n)
-	{
-		if (*s1 != *s2)
-			return (0);
-		s1++;
-		s2++;
-		i++;
-	}
+	if (s1 != NULL && s2 != NULL)
+		while ((*s1 || *s2) && i < n)
+		{
+			if (*s1++ != *s2++)
+				return (0);
+			i++;
+		}
 	return (1);
 }
