@@ -22,7 +22,7 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	i[0] = (int)ft_strlen(s1) - 1;
 	i[1] = (int)ft_strlen(s2) - 1;
 	if (s1 != NULL && s2 != NULL)
-		new_str = malloc(sizeof(char) * (i[0] + i[1] + 1 ));
+		new_str = malloc(sizeof(char) * (i[0] + i[1] + 1));
 	if (new_str != NULL)
 	{
 		i[2] = 0;
