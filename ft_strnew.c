@@ -20,7 +20,8 @@ char	*ft_strnew(size_t size)
 	size_t	i;
 
 	new_str = NULL;
-	new_str = malloc(sizeof(char) * size + 1);
+	if (size != 0)
+		new_str = malloc(sizeof(char) * size + 1);
 	if (new_str != NULL)
 	{
 		i = 0;
