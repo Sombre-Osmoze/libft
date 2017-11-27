@@ -29,11 +29,11 @@ char	*ft_strjoin(const char *s1, const char *s2)
 			i[3] = 0;
 			while ((i[0] + i[1]) >= i[2])
 			{
-				if (i[2] < ft_strlen(s1))
+				if (i[2] < (int)ft_strlen(s1))
 				{
 					new_str[i[2]] = s1[i[2]];
 				}
-				else if (i[3] < ft_strlen(s2))
+				else if (i[3] < (int)ft_strlen(s2))
 					new_str[i[2]++] = s2[i[3]++];
 			}
 			new_str[i[2]] = '\0';
