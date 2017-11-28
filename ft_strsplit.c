@@ -51,7 +51,7 @@ char		**ft_strsplit(char const *s, char c)
 		return (NULL);
 	len = 0;
 	word = 0;
-	if ((str = prepare_str(ft_strdup(s), &len, &word, c)) == NULL)
+	if ((str = prepare_str(ft_strdup((char *)s), &len, &word, c)) == NULL)
 		return (NULL);
 	if ((tab = (char **)malloc(sizeof(char *) * (word + 1))) == NULL)
 		return (NULL);
