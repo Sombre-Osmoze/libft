@@ -46,7 +46,7 @@ typedef struct	s_ctrl
 t_ctrl			*ft_init_ctrl(void);
 t_item			*ft_get_item(t_ctrl *ctrl, size_t pos);
 t_item			*ft_search_item(t_ctrl *ctrl, const void *ref, int i,
-						int (*cmp)(const void *cmp, const void *ref, int i));
+						int (*cmp)(const void *cmp, const void *ref));
 t_item			*ft_create_item(t_ctrl *ctrl, size_t pos);
 t_item			*ft_rm_item(t_ctrl *ctrl, size_t pos);
 void			*ft_memset(void *b, int c, size_t len);
@@ -116,7 +116,7 @@ t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int				ft_stricpy(char *dst, const char *src);
 void			*ft_memjoin(void *head, size_t head_size,
 							void *tail, size_t tail_size);
-int				ft_int_cmp(const void *cmp, const void *ref, int i);
+int				ft_int_cmp(const void *cmp, const void *ref);
 size_t			ft_abs(long long nb);
 size_t			ft_memichr(const void *src, char chr, size_t len);
 char			*ft_strnjoin(const char *s1, size_t n1,

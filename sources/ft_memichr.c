@@ -15,11 +15,11 @@
 
 size_t	ft_memichr(const void *src, char chr, size_t len)
 {
-	unsigned char	*p_src;
-	size_t			i;
+	const unsigned char	*p_src;
+	size_t				i;
 
 	i = 0;
-	p_src = (unsigned char *)src;
+	p_src = (const unsigned char *)src;
 	while (i < len)
 	{
 		if (*p_src == (unsigned char)chr)

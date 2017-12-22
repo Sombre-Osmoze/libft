@@ -14,14 +14,14 @@
 #include "../includes/libft.h"
 
 t_item	*ft_search_item(t_ctrl *ctrl, const void *ref, int i,
-						int (*cmp)(const void *cmp, const void *ref, int i))
+						int (*cmp)(const void *cmp, const void *ref))
 {
 	t_item	*tmp;
 
 	tmp = ctrl->head;
 	while (tmp != NULL)
 	{
-		if ((cmp)(tmp->content_ref, ref, i))
+		if ((cmp)(tmp->content_ref + i, ref + i))
 		{
 			ctrl->last_ac = tmp;
 			return (tmp);

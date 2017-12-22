@@ -14,11 +14,11 @@
 
 void		*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char	*str1;
-	char	*str2;
+	char		*str1;
+	const char	*str2;
 
 	str1 = (char *)dst;
-	str2 = (char *)src;
+	str2 = (const char *)src;
 	if (len == 0)
 		return (dst);
 	if (str2 < str1)
