@@ -1,20 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marcusflorentin <marvin@42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/18 19:02:12 by marcusflo         #+#    #+#             */
-/*   Updated: 2017/11/18 19:02:13 by marcusflo        ###   ########.fr       */
+/*   Created: 2017/11/23 15:29:09 by marcusflo         #+#    #+#             */
+/*   Updated: 2017/11/23 15:29:10 by marcusflo        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include <stdlib.h>
-#include "libft.h"
+#include "../includes/libft.h"
 
-char	*ft_strnew(size_t size)
+t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	return ((char *)ft_memalloc(size + 1));
+	t_list	*new_lst;
+	t_list	*item;
+
+	new_lst = NULL;
+	if (lst != NULL && (f) != NULL)
+	{
+		item = (f)(lst);
+		new_lst = item;
+		lst = lst->next;
+		while (lst != NULL)
+		{
+			item->next = (*f)(lst);
+			item = item->next;
+			lst = lst->next;
+		}
+	}
+	return (new_lst);
 }

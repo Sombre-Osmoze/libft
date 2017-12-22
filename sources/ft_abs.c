@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include <string.h>
-#include "libft.h"
 
 size_t	ft_abs(long long nb)
 {

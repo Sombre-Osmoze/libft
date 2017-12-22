@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marcusflorentin <marvin@42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/22 19:59:50 by marcusflo         #+#    #+#             */
-/*   Updated: 2017/11/22 19:59:51 by marcusflo        ###   ########.fr       */
+/*   Created: 2017/11/18 19:02:12 by marcusflo         #+#    #+#             */
+/*   Updated: 2017/11/18 19:02:13 by marcusflo        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdlib.h>
-#include "libft.h"
+#include "../includes/libft.h"
 
-void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
+char	*ft_strnew(size_t size)
 {
-	if ((*alst) != NULL)
-	{
-		(del)((*alst)->content, (*alst)->content_size);
-		free((*alst));
-		*alst = NULL;
-	}
+	return ((char *)ft_memalloc(size + 1));
 }

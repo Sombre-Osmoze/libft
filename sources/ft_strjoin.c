@@ -1,39 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mflorent <mflorent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/29 14:57:46 by mflorent          #+#    #+#             */
-/*   Updated: 2017/11/20 21:15:08 by mflorent         ###   ########.fr       */
+/*   Created: 2017/10/29 15:00:14 by mflorent          #+#    #+#             */
+/*   Updated: 2017/11/20 21:18:53 by mflorent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 #include <stdlib.h>
 
-t_list	*ft_lstnew(const void *content, size_t content_size)
+char	*ft_strjoin(const char *s1, const char *s2)
 {
-	t_list	*new;
+	size_t	i[4];
+	char	*new;
+	char	*buff;
 
-	if ((new = (t_list *)malloc(sizeof(t_list))) == NULL)
+	ft_bzero(i, sizeof(i));
+	i[2] = ft_strlen(s1);
+	i[3] = ft_strlen(s2);
+	if (s1 == NULL || s2 == NULL)
 		return (NULL);
-	if (content == NULL)
+	if ((new = ft_strnew((i[2] + i[3] - 2) * sizeof(char) + 1)) == NULL)
+		return (NULL);
+	buff = new;
+	while (i[0] < i[2])
 	{
-		new->content = NULL;
-		new->content_size = 0;
+		*new++ = *s1++;
+		i[0] += 1;
 	}
-	else
+	while (i[1] < i[3])
 	{
-		if ((new->content = malloc(content_size)) == NULL)
-		{
-			free(new);
-			return (NULL);
-		}
-		new->content = ft_memmove(new->content, content, content_size);
-		new->content_size = content_size;
+		*new++ = *s2++;
+		i[1] += 1;
 	}
-	new->next = NULL;
-	return (new);
+	*new = '\0';
+	return (buff);
 }

@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdel.c                                        :+:      :+:    :+:   */
+/*   ft_memichr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marcusflorentin <marvin@42.fr>             +#+  +:+       +#+        */
+/*   By: mflorent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/22 20:28:50 by marcusflo         #+#    #+#             */
-/*   Updated: 2017/11/22 20:28:52 by marcusflo        ###   ########.fr       */
+/*   Created: 2017/12/12 06:16:19 by mflorent          #+#    #+#             */
+/*   Updated: 2017/12/12 06:16:21 by mflorent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
-#include <stdlib.h>
-#include "libft.h"
+#include "../includes/libft.h"
 
-void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
+size_t	ft_memichr(const void *src, char chr, size_t len)
 {
-	while (*alst && (*del))
+	unsigned char	*p_src;
+	size_t			i;
+
+	i = 0;
+	p_src = (unsigned char *)src;
+	while (i < len)
 	{
-		ft_lstdel(&(*alst)->next, (*del));
-		ft_lstdelone(alst, (*del));
+		if (*p_src == (unsigned char)chr)
+			return (i);
+		i++;
+		p_src++;
 	}
+	return (len + 1);
 }

@@ -12,83 +12,85 @@
 
 NAME	=	libft.a
 
-SRC		=	ft_abs.c \
-			ft_atoi.c \
-			ft_bzero.c \
-			ft_create_item.c \
-			ft_get_item.c \
-			ft_init_ctrl.c \
-			ft_int_cmp.c \
-			ft_isalnum.c \
-			ft_isalpha.c \
-			ft_isascii.c \
-			ft_isdigit.c \
-			ft_isprint.c \
-			ft_itoa.c \
-			ft_lstadd.c \
-			ft_lstdel.c \
-			ft_lstdelone.c \
-			ft_lstiter.c \
-			ft_lstmap.c \
-			ft_lstnew.c \
-			ft_memalloc.c \
-			ft_memccpy.c \
-			ft_memchr.c \
-			ft_memcmp.c \
-			ft_memcpy.c \
-			ft_memdel.c \
-			ft_memichr.c \
-			ft_memicmp.c \
-			ft_memjoin.c \
-			ft_memmove.c \
-			ft_memset.c \
-			ft_memswp.c \
-			ft_putchar.c \
-			ft_putchar_fd.c \
-			ft_putendl.c \
-			ft_putendl_fd.c \
-			ft_putnbr.c \
-			ft_putnbr_fd.c \
-			ft_putstr.c \
-			ft_putstr_fd.c \
-			ft_rm_item.c \
-			ft_search_item.c \
-			ft_strcat.c \
-			ft_strchr.c \
-			ft_strclr.c \
-			ft_strcmp.c \
-			ft_strcpy.c \
-			ft_strdel.c \
-			ft_strdup.c \
-			ft_strequ.c \
-			ft_stricpy.c \
-			ft_striter.c \
-			ft_striteri.c \
-			ft_strjoin.c \
-			ft_strlcat.c \
-			ft_strlen.c \
-			ft_strlswp.c \
-			ft_strmap.c \
-			ft_strmapi.c \
-			ft_strncat.c \
-			ft_strncmp.c \
-			ft_strncpy.c \
-			ft_strnequ.c \
-			ft_strnew.c \
-			ft_strnjoin.c \
-			ft_strnstr.c \
-			ft_strnswp.c \
-			ft_strrchr.c \
-			ft_strsplit.c \
-			ft_strstr.c \
-			ft_strsub.c \
-			ft_strswp.c \
-			ft_strtrim.c \
-			ft_tolower.c \
-			ft_toupper.c \
+INC		=	includes/libft.h
+
+SRC		=	sources/ft_abs.c \
+			sources/ft_atoi.c \
+			sources/ft_bzero.c \
+			sources/ft_create_item.c \
+			sources/ft_get_item.c \
+			sources/ft_init_ctrl.c \
+			sources/ft_int_cmp.c \
+			sources/ft_isalnum.c \
+			sources/ft_isalpha.c \
+			sources/ft_isascii.c \
+			sources/ft_isdigit.c \
+			sources/ft_isprint.c \
+			sources/ft_itoa.c \
+			sources/ft_lstadd.c \
+			sources/ft_lstdel.c \
+			sources/ft_lstdelone.c \
+			sources/ft_lstiter.c \
+			sources/ft_lstmap.c \
+			sources/ft_lstnew.c \
+			sources/ft_memalloc.c \
+			sources/ft_memccpy.c \
+			sources/ft_memchr.c \
+			sources/ft_memcmp.c \
+			sources/ft_memcpy.c \
+			sources/ft_memdel.c \
+			sources/ft_memichr.c \
+			sources/ft_memicmp.c \
+			sources/ft_memjoin.c \
+			sources/ft_memmove.c \
+			sources/ft_memset.c \
+			sources/ft_memswp.c \
+			sources/ft_putchar.c \
+			sources/ft_putchar_fd.c \
+			sources/ft_putendl.c \
+			sources/ft_putendl_fd.c \
+			sources/ft_putnbr.c \
+			sources/ft_putnbr_fd.c \
+			sources/ft_putstr.c \
+			sources/ft_putstr_fd.c \
+			sources/ft_rm_item.c \
+			sources/ft_search_item.c \
+			sources/ft_strcat.c \
+			sources/ft_strchr.c \
+			sources/ft_strclr.c \
+			sources/ft_strcmp.c \
+			sources/ft_strcpy.c \
+			sources/ft_strdel.c \
+			sources/ft_strdup.c \
+			sources/ft_strequ.c \
+			sources/ft_stricpy.c \
+			sources/ft_striter.c \
+			sources/ft_striteri.c \
+			sources/ft_strjoin.c \
+			sources/ft_strlcat.c \
+			sources/ft_strlen.c \
+			sources/ft_strlswp.c \
+			sources/ft_strmap.c \
+			sources/ft_strmapi.c \
+			sources/ft_strncat.c \
+			sources/ft_strncmp.c \
+			sources/ft_strncpy.c \
+			sources/ft_strnequ.c \
+			sources/ft_strnew.c \
+			sources/ft_strnjoin.c \
+			sources/ft_strnstr.c \
+			sources/ft_strnswp.c \
+			sources/ft_strrchr.c \
+			sources/ft_strsplit.c \
+			sources/ft_strstr.c \
+			sources/ft_strsub.c \
+			sources/ft_strswp.c \
+			sources/ft_strtrim.c \
+			sources/ft_tolower.c \
+			sources/ft_toupper.c \
 
 
-
+CC 		=	clang
 
 OBJS	=	$(SRC:.c=.o)
 
@@ -97,7 +99,7 @@ RM		=		rm -f
 CFLAGS	=	-Wall -Wextra -Werror
 
 $(NAME)	:	$(OBJS)
-		ar rc $(NAME) $(OBJS)
+		ar rc $(NAME) $(OBJS) $(INC)
 
 all		:		$(NAME)
 

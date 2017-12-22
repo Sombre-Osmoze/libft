@@ -1,35 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marcusflorentin <marvin@42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/23 15:29:09 by marcusflo         #+#    #+#             */
-/*   Updated: 2017/11/23 15:29:10 by marcusflo        ###   ########.fr       */
+/*   Created: 2017/11/22 20:37:48 by marcusflo         #+#    #+#             */
+/*   Updated: 2017/11/22 20:37:50 by marcusflo        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "libft.h"
+#include "../includes/libft.h"
 
-t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+void	ft_lstadd(t_list **alst, t_list *new)
 {
-	t_list	*new_lst;
-	t_list	*item;
-
-	new_lst = NULL;
-	if (lst != NULL && (f) != NULL)
+	if (alst && new)
 	{
-		item = (f)(lst);
-		new_lst = item;
-		lst = lst->next;
-		while (lst != NULL)
-		{
-			item->next = (*f)(lst);
-			item = item->next;
-			lst = lst->next;
-		}
+		new->next = *alst;
+		*alst = new;
 	}
-	return (new_lst);
 }
