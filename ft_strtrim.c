@@ -36,6 +36,14 @@ static int	c_count(char const *s)
 	return ((j - i) + 1);
 }
 
+
+/*
+** Supprime les "white space" devant et derrière la string et retourne le tout
+** dans une chaine de caractère allouée
+**
+** @param s Chaine de caractre à "trim"
+** @return Pointeur sur la nouvelle chaine de caractère
+*/
 char		*ft_strtrim(char const *s)
 {
 	char	*new;
@@ -44,6 +52,7 @@ char		*ft_strtrim(char const *s)
 
 	i = 0;
 	n = 0;
+	new = NULL;
 	if (!s)
 		return (NULL);
 	new = (char *)malloc(sizeof(char) * (c_count(s) + 1));
@@ -54,7 +63,7 @@ char		*ft_strtrim(char const *s)
 	while (s[i])
 		new[n++] = s[i++];
 	n--;
-	while (is_blank(new[n]))
+	while (n >= 0 && is_blank(new[n]))
 		n--;
 	new[++n] = '\0';
 	return (new);

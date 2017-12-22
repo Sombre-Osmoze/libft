@@ -14,7 +14,7 @@
 
 int	ft_stricpy(char *dst, const char *src)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
 	while (src[i] != '\0')
