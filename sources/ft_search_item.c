@@ -17,11 +17,13 @@ t_item	*ft_search_item(t_ctrl *ctrl, const void *ref, int i,
 						int (*cmp)(const void *cmp, const void *ref))
 {
 	t_item	*tmp;
+	int		*cont_ref;
 
+	cont_ref = NULL;
 	tmp = ctrl->head;
 	while (tmp != NULL)
 	{
-		if ((cmp)(tmp->content_ref + i, ref + i))
+		if ((cmp)(&cont_ref[i], ref))
 		{
 			ctrl->last_ac = tmp;
 			return (tmp);

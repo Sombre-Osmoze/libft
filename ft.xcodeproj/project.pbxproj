@@ -85,6 +85,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED79FD071FEDAF7700EB15A1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		EDEBF9431FED8A2F00C771FC /* libft.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libft.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDEBF9541FED8A6100C771FC /* libft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libft.h; sourceTree = "<group>"; };
 		EDEBF9581FED8A6200C771FC /* libft.fr.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = libft.fr.pdf; sourceTree = "<group>"; };
@@ -178,6 +179,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED79FD061FEDAF7700EB15A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED79FD071FEDAF7700EB15A1 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EDEBF93A1FED8A2F00C771FC = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +196,7 @@
 				EDEBFB141FED9A3C00C771FC /* README.md */,
 				EDEBFA7F1FED99E100C771FC /* sources */,
 				EDEBF9E91FED90FB00C771FC /* includes */,
+				ED79FD061FEDAF7700EB15A1 /* Frameworks */,
 				EDEBF9441FED8A2F00C771FC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -341,6 +351,7 @@
 		EDEBF93B1FED8A2F00C771FC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Marcus Florentin";
 				TargetAttributes = {
