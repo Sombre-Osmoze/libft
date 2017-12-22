@@ -164,6 +164,7 @@
 		EDEBFAC71FED99E100C771FC /* ft_strncpy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ft_strncpy.c; sourceTree = "<group>"; };
 		EDEBFAC81FED99E100C771FC /* ft_tolower.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ft_tolower.c; sourceTree = "<group>"; };
 		EDEBFAC91FED99E100C771FC /* ft_strcmp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ft_strcmp.c; sourceTree = "<group>"; };
+		EDEBFB141FED9A3C00C771FC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +184,7 @@
 				EDEBF98A1FED8A7C00C771FC /* auteur */,
 				EDEBF96E1FED8A6E00C771FC /* Makefile */,
 				EDEBF9581FED8A6200C771FC /* libft.fr.pdf */,
+				EDEBFB141FED9A3C00C771FC /* README.md */,
 				EDEBFA7F1FED99E100C771FC /* sources */,
 				EDEBF9E91FED90FB00C771FC /* includes */,
 				EDEBF9441FED8A2F00C771FC /* Products */,
