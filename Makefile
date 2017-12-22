@@ -12,8 +12,13 @@
 
 NAME	=	libft.a
 
-SRC		=	ft_atoi.c \
+SRC		=	ft_abs.c \
+			ft_atoi.c \
 			ft_bzero.c \
+			ft_create_item.c \
+			ft_get_item.c \
+			ft_init_ctrl.c \
+			ft_int_cmp.c \
 			ft_isalnum.c \
 			ft_isalpha.c \
 			ft_isascii.c \
@@ -32,7 +37,9 @@ SRC		=	ft_atoi.c \
 			ft_memcmp.c \
 			ft_memcpy.c \
 			ft_memdel.c \
+			ft_memichr.c \
 			ft_memicmp.c \
+			ft_memjoin.c \
 			ft_memmove.c \
 			ft_memset.c \
 			ft_memswp.c \
@@ -44,6 +51,8 @@ SRC		=	ft_atoi.c \
 			ft_putnbr_fd.c \
 			ft_putstr.c \
 			ft_putstr_fd.c \
+			ft_rm_item.c \
+			ft_search_item.c \
 			ft_strcat.c \
 			ft_strchr.c \
 			ft_strclr.c \
@@ -52,6 +61,7 @@ SRC		=	ft_atoi.c \
 			ft_strdel.c \
 			ft_strdup.c \
 			ft_strequ.c \
+			ft_stricpy.c \
 			ft_striter.c \
 			ft_striteri.c \
 			ft_strjoin.c \
@@ -65,6 +75,7 @@ SRC		=	ft_atoi.c \
 			ft_strncpy.c \
 			ft_strnequ.c \
 			ft_strnew.c \
+			ft_strnjoin.c \
 			ft_strnstr.c \
 			ft_strnswp.c \
 			ft_strrchr.c \
@@ -75,6 +86,9 @@ SRC		=	ft_atoi.c \
 			ft_strtrim.c \
 			ft_tolower.c \
 			ft_toupper.c \
+
+
+
 
 OBJS	=	$(SRC:.c=.o)
 

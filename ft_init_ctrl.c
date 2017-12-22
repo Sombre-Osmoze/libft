@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_init_ctrl.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marcusflorentin <marvin@42.fr>             +#+  +:+       +#+        */
+/*   By: mflorent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/18 18:28:20 by marcusflo         #+#    #+#             */
-/*   Updated: 2017/11/18 18:28:25 by marcusflo        ###   ########.fr       */
+/*   Created: 2017/12/12 01:19:16 by mflorent          #+#    #+#             */
+/*   Updated: 2017/12/12 01:19:18 by mflorent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include <stdlib.h>
+#include "libft.h"
 
-void	*ft_memalloc(size_t size)
+t_ctrl	*ft_init_ctrl(void)
 {
-	void	*new_buff;
-	char	*set_buff;
-	size_t	i;
+	t_ctrl	*new_ctrl;
 
-	i = 0;
-	new_buff = malloc(size);
-	if (new_buff != NULL)
-	{
-		set_buff = new_buff;
-		while (i < size)
-			set_buff[i++] = '\0';
-	}
-	return (new_buff);
+	new_ctrl = malloc(sizeof(t_ctrl));
+	new_ctrl->nb_item = 0;
+	new_ctrl->head = NULL;
+	new_ctrl->tail = NULL;
+	new_ctrl->curr = NULL;
+	new_ctrl->last_ac = NULL;
+	return (new_ctrl);
 }

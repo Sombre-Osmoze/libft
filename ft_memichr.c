@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_memichr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marcusflorentin <marvin@42.fr>             +#+  +:+       +#+        */
+/*   By: mflorent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/18 18:28:20 by marcusflo         #+#    #+#             */
-/*   Updated: 2017/11/18 18:28:25 by marcusflo        ###   ########.fr       */
+/*   Created: 2017/12/12 06:16:19 by mflorent          #+#    #+#             */
+/*   Updated: 2017/12/12 06:16:21 by mflorent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
-#include <stdlib.h>
+#include "libft.h"
 
-void	*ft_memalloc(size_t size)
+size_t	ft_memichr(const void *src, char chr, size_t len)
 {
-	void	*new_buff;
-	char	*set_buff;
-	size_t	i;
+	unsigned char	*p_src;
+	size_t			i;
 
 	i = 0;
-	new_buff = malloc(size);
-	if (new_buff != NULL)
+	p_src = (unsigned char *)src;
+	while (i < len)
 	{
-		set_buff = new_buff;
-		while (i < size)
-			set_buff[i++] = '\0';
+		if (*p_src == (unsigned char)chr)
+			return (i);
+		i++;
+		p_src++;
 	}
-	return (new_buff);
+	return (len + 1);
 }

@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_abs.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marcusflorentin <marvin@42.fr>             +#+  +:+       +#+        */
+/*   By: mflorent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/18 18:28:20 by marcusflo         #+#    #+#             */
-/*   Updated: 2017/11/18 18:28:25 by marcusflo        ###   ########.fr       */
+/*   Created: 2017/12/12 04:04:40 by mflorent          #+#    #+#             */
+/*   Updated: 2017/12/12 04:04:40 by mflorent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
-#include <stdlib.h>
+#include "libft.h"
 
-void	*ft_memalloc(size_t size)
+size_t	ft_abs(long long nb)
 {
-	void	*new_buff;
-	char	*set_buff;
-	size_t	i;
-
-	i = 0;
-	new_buff = malloc(size);
-	if (new_buff != NULL)
+	if (nb < 0)
 	{
-		set_buff = new_buff;
-		while (i < size)
-			set_buff[i++] = '\0';
+		nb *= -1;
 	}
-	return (new_buff);
+	return (nb);
 }
