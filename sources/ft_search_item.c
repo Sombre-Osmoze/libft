@@ -23,6 +23,7 @@ t_item	*ft_search_item(t_ctrl *ctrl, const void *ref, int i,
 	tmp = ctrl->head;
 	while (tmp != NULL)
 	{
+		cont_ref = tmp->content_ref;
 		if ((cmp)(&cont_ref[i], ref))
 		{
 			ctrl->last_ac = tmp;

@@ -17,7 +17,7 @@ int	ft_int_cmp(const void *cmp, const void *ref)
 
 	cmp_p = (const int *)cmp;
 	ref_p = (const int *)ref;
-	if (cmp_p == ref_p)
+	if (*cmp_p == *ref_p)
 		return (1);
 	else
 		return (0);
