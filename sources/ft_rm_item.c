@@ -16,9 +16,15 @@
 static void	ft_delete_data(t_ctrl *ctrl, t_item *tmp)
 {
 	if (tmp->content)
+	{
+		ft_bzero(tmp->content_ref, sizeof(tmp));
 		free(tmp->content);
+	}
 	if (tmp->content_ref)
+	{
+		ft_bzero(tmp->content_ref, sizeof(tmp));
 		free(tmp->content_ref);
+	}
 	if (tmp->prev)
 		tmp->prev->next = tmp->next;
 	if (tmp->next)
