@@ -47,9 +47,11 @@ t_item	*ft_get_item(t_ctrl *ctrl, size_t pos)
 	unsigned long long	res[4];
 	t_item				*tmp;
 
-	ft_bzero(res, sizeof(res[0] * 5));
-	if (pos == 0)
+	if (!ctrl)
 		return (NULL);
+	if (ctrl->nb_item > 15)
+		return (ctrl->head);
+	ft_bzero(res, sizeof(res[0] * 5));
 	if (ctrl->head)
 		res[0] = ft_abs(ctrl->head->row - pos);
 	if (ctrl->tail)
@@ -68,4 +70,3 @@ t_item	*ft_get_item(t_ctrl *ctrl, size_t pos)
 			tmp = tmp->prev;
 	return (tmp);
 }
-
