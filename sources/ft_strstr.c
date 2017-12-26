@@ -13,19 +13,19 @@
 #include <stdlib.h>
 #include <string.h>
 
-char	*ft_strstr(const char *haystack, const char *needle)
+const char	*ft_strstr(const char *haystack, const char *needle)
 {
-	char	*buff;
+	const char	*buff;
 	size_t	i;
 
 	buff = NULL;
 	if (*needle == '\0')
-		return ((char *)haystack);
+		return ((const char *)haystack);
 	while (*haystack && buff == NULL)
 	{
 		if (*haystack == *needle)
 		{
-			buff = (char *)haystack;
+			buff = (const char *)haystack;
 			i = 0;
 			while (needle[i] != '\0' && buff != NULL)
 				if (buff[i] != needle[i])

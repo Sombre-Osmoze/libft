@@ -14,20 +14,20 @@
 #include <stdlib.h>
 #include "../includes/libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+const char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	char	*buff;
-	size_t	i[2];
+	const char	*buff;
+	size_t		i[2];
 
 	buff = NULL;
 	i[0] = 0;
 	if (*needle == '\0')
-		return ((char *)haystack);
+		return ((const char *)haystack);
 	while (*haystack && buff == NULL && i[0] < len)
 	{
 		if (*haystack == *needle && (i[0] + ft_strlen(needle) - 1) < len)
 		{
-			buff = (char *)haystack;
+			buff = (const char *)haystack;
 			i[1] = 0;
 			while (needle[i[1]] != '\0' && buff != NULL)
 			{

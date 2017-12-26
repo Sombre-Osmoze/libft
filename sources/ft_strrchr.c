@@ -12,18 +12,18 @@
 
 #include <stdlib.h>
 
-char	*ft_strrchr(const char *s, int c)
+const char	*ft_strrchr(const char *s, int c)
 {
-	char	*buf;
+	const char	*buf;
 
 	buf = NULL;
 	while (*s != '\0')
 	{
 		if (*s == c)
-			buf = (char *)s;
+			buf = (const char *)s;
 		s++;
 	}
 	if (c == '\0')
-		return ((char *)s);
+		return ((const char *)s);
 	return (buf);
 }
