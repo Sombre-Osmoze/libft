@@ -23,7 +23,7 @@ char	*ft_strnjoin(const char *s1, size_t n1, const char *s2, size_t n2)
 		return (NULL);
 	ft_bzero(i, sizeof(i));
 	buff = new;
-	while (s1 && i[0] < n1)
+	while (*s1 && i[0] < n1)
 	{
 		*new++ = *s1++;
 		i[0] += 1;
