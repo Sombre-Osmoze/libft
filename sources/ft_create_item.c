@@ -70,11 +70,8 @@ t_item			*ft_create_item(t_ctrl *ctrl, size_t pos)
 			return (NULL);
 		ft_set_null(ctrl, new_item, pos);
 		new_item->prev = tmp;
-		if (tmp)
-		{
-			new_item->next = tmp->next;
-			tmp->next = new_item;
-		}
+		new_item->next = tmp->next;
+		tmp->next = new_item;
 	}
 	tmp = new_item->next;
 	while (tmp != NULL)

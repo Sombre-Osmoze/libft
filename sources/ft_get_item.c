@@ -42,7 +42,7 @@ static t_item	*ft_mv_prev_pos(t_ctrl *c, unsigned long long res[4], size_t ps)
 	return (NULL);
 }
 
-t_item	*ft_get_item(t_ctrl *ctrl, size_t pos)
+t_item			*ft_get_item(t_ctrl *ctrl, size_t pos)
 {
 	unsigned long long	res[4];
 	t_item				*tmp;

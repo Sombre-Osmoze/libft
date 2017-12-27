@@ -16,7 +16,7 @@
 const char	*ft_strstr(const char *haystack, const char *needle)
 {
 	const char	*buff;
-	size_t	i;
+	size_t		i;
 
 	buff = NULL;
 	if (*needle == '\0')

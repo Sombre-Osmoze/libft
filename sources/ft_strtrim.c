@@ -36,7 +36,6 @@ static int	c_count(char const *s)
 	return ((j - i) + 1);
 }
 
-
 /*
 ** Supprime les "white space" devant et derrière la string et retourne le tout
 ** dans une chaine de caractère allouée
@@ -44,6 +43,7 @@ static int	c_count(char const *s)
 ** @param s Chaine de caractre à "trim"
 ** @return Pointeur sur la nouvelle chaine de caractère
 */
+
 char		*ft_strtrim(char const *s)
 {
 	char	*new;
