@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "../includes/libft.h"
+#include "libft.h"
 
 static void	ft_delete_data(t_ctrl *ctrl, t_item *tmp)
 {

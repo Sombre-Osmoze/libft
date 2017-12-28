@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl.c                                       :+:      :+:    :+:   */
+/*   ft_rm_ctrl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marcusflorentin <marvin@42.fr>             +#+  +:+       +#+        */
+/*   By: mflorent <mflorent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/22 17:08:15 by marcusflo         #+#    #+#             */
-/*   Updated: 2017/11/22 17:08:16 by marcusflo        ###   ########.fr       */
+/*   Created: 2017/27/12 18:31:00 by mflorent          #+#    #+#             */
+/*   Updated: 2017/27/12 18:31:00 by mflorent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include <stdlib.h>
 #include "libft.h"
 
-void	ft_putendl(const char *s)
+void	ft_rm_ctrl(t_ctrl *ctrl)
 {
-	if (s != NULL)
+	if (ctrl)
 	{
-		ft_putstr(s);
-		write(1, "\n", 1);
+		ctrl->nb_item = 0;
+		ctrl->curr = NULL;
+		ctrl->head = NULL;
+		ctrl->tail = NULL;
+		ctrl->last_ac = NULL;
+		free(ctrl);
 	}
 }

@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl.c                                       :+:      :+:    :+:   */
+/*   ft_clean_list.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marcusflorentin <marvin@42.fr>             +#+  +:+       +#+        */
+/*   By: mflorent <mflorent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/22 17:08:15 by marcusflo         #+#    #+#             */
-/*   Updated: 2017/11/22 17:08:16 by marcusflo        ###   ########.fr       */
+/*   Created: 2017/28/12 12:50:00 by mflorent          #+#    #+#             */
+/*   Updated: 2017/28/12 12:50:00 by mflorent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include <stdlib.h>
 #include "libft.h"
 
-void	ft_putendl(const char *s)
+void	ft_clean_list(t_ctrl *ctrl)
 {
-	if (s != NULL)
+	t_item	*item;
+
+	if (ctrl)
 	{
-		ft_putstr(s);
-		write(1, "\n", 1);
+		item = ctrl->head;
+		while (item != NULL)
+		{
+			ft_rm_item(ctrl, item->row);
+			item = item->next;
+		}
 	}
 }

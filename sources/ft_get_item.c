@@ -12,7 +12,7 @@
 
 #include <stdlib.h>
 #include <string.h>
-#include "../includes/libft.h"
+#include "libft.h"
 
 static t_item	*ft_mv_prev_pos(t_ctrl *c, unsigned long long res[4], size_t ps)
 {

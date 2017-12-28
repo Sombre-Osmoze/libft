@@ -12,7 +12,7 @@
 
 #include <stdlib.h>
 #include <string.h>
-#include "../includes/libft.h"
+#include "libft.h"
 
 static void		ft_set_null(t_ctrl *ctrl, t_item *new, size_t pos)
 {

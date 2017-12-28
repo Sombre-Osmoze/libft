@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
 #include <stdlib.h>
+#include "libft.h"
 
 static int	is_blank(char c)
 {

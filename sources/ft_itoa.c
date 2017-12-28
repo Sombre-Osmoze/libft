@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
 #include <string.h>
 #include <stdlib.h>
+#include "libft.h"
 
 static int	ft_convert(int n)
 {

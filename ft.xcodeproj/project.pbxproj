@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EDC446811FF4105600BFC2EC /* ft_rm_ctrl.c in Sources */ = {isa = PBXBuildFile; fileRef = EDC446801FF4105600BFC2EC /* ft_rm_ctrl.c */; };
+		EDC446831FF4671900BFC2EC /* ft_rm_list.c in Sources */ = {isa = PBXBuildFile; fileRef = EDC446821FF4671900BFC2EC /* ft_rm_list.c */; };
+		EDC446851FF5120700BFC2EC /* ft_clean_list.c in Sources */ = {isa = PBXBuildFile; fileRef = EDC446841FF5120700BFC2EC /* ft_clean_list.c */; };
 		EDEBF9A21FED8A8400C771FC /* libft.h in Headers */ = {isa = PBXBuildFile; fileRef = EDEBF9541FED8A6100C771FC /* libft.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EDEBFACA1FED99E100C771FC /* ft_strncat.c in Sources */ = {isa = PBXBuildFile; fileRef = EDEBFA801FED99E100C771FC /* ft_strncat.c */; };
 		EDEBFACB1FED99E100C771FC /* ft_strnstr.c in Sources */ = {isa = PBXBuildFile; fileRef = EDEBFA811FED99E100C771FC /* ft_strnstr.c */; };
@@ -86,6 +89,9 @@
 
 /* Begin PBXFileReference section */
 		ED79FD071FEDAF7700EB15A1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		EDC446801FF4105600BFC2EC /* ft_rm_ctrl.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_rm_ctrl.c; sourceTree = "<group>"; };
+		EDC446821FF4671900BFC2EC /* ft_rm_list.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_rm_list.c; sourceTree = "<group>"; };
+		EDC446841FF5120700BFC2EC /* ft_clean_list.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_clean_list.c; sourceTree = "<group>"; };
 		EDEBF9431FED8A2F00C771FC /* libft.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libft.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDEBF9541FED8A6100C771FC /* libft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libft.h; sourceTree = "<group>"; };
 		EDEBF9581FED8A6200C771FC /* libft.fr.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = libft.fr.pdf; sourceTree = "<group>"; };
@@ -221,13 +227,13 @@
 			isa = PBXGroup;
 			children = (
 				EDEBFA801FED99E100C771FC /* ft_strncat.c */,
-				EDEBFA811FED99E100C771FC /* ft_strnstr.c */,
 				EDEBFA821FED99E100C771FC /* ft_strswp.c */,
 				EDEBFA831FED99E100C771FC /* ft_lstadd.c */,
 				EDEBFA841FED99E100C771FC /* ft_isdigit.c */,
 				EDEBFA851FED99E100C771FC /* ft_create_item.c */,
 				EDEBFA861FED99E100C771FC /* ft_putstr_fd.c */,
 				EDEBFA871FED99E100C771FC /* ft_strequ.c */,
+				EDEBFA811FED99E100C771FC /* ft_strnstr.c */,
 				EDEBFA881FED99E100C771FC /* ft_lstnew.c */,
 				EDEBFA891FED99E100C771FC /* ft_strlen.c */,
 				EDEBFA8A1FED99E100C771FC /* ft_strnjoin.c */,
@@ -294,6 +300,9 @@
 				EDEBFAC71FED99E100C771FC /* ft_strncpy.c */,
 				EDEBFAC81FED99E100C771FC /* ft_tolower.c */,
 				EDEBFAC91FED99E100C771FC /* ft_strcmp.c */,
+				EDC446801FF4105600BFC2EC /* ft_rm_ctrl.c */,
+				EDC446821FF4671900BFC2EC /* ft_rm_list.c */,
+				EDC446841FF5120700BFC2EC /* ft_clean_list.c */,
 			);
 			path = sources;
 			sourceTree = "<group>";
@@ -319,6 +328,7 @@
 			buildPhases = (
 			);
 			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "";
 			dependencies = (
 			);
 			name = libft.a;
@@ -394,6 +404,7 @@
 				EDEBFADF1FED99E100C771FC /* ft_bzero.c in Sources */,
 				EDEBFAFA1FED99E100C771FC /* ft_strncmp.c in Sources */,
 				EDEBFADE1FED99E100C771FC /* ft_striteri.c in Sources */,
+				EDC446851FF5120700BFC2EC /* ft_clean_list.c in Sources */,
 				EDEBFAE21FED99E100C771FC /* ft_memcpy.c in Sources */,
 				EDEBFAE81FED99E100C771FC /* ft_isprint.c in Sources */,
 				EDEBFAF41FED99E100C771FC /* ft_memchr.c in Sources */,
@@ -403,6 +414,7 @@
 				EDEBFAD61FED99E100C771FC /* ft_putnbr.c in Sources */,
 				EDEBFAD81FED99E100C771FC /* ft_int_cmp.c in Sources */,
 				EDEBFAEA1FED99E100C771FC /* ft_putendl_fd.c in Sources */,
+				EDC446811FF4105600BFC2EC /* ft_rm_ctrl.c in Sources */,
 				EDEBFAD71FED99E100C771FC /* ft_strclr.c in Sources */,
 				EDEBFAD91FED99E100C771FC /* ft_memicmp.c in Sources */,
 				EDEBFADC1FED99E100C771FC /* ft_lstiter.c in Sources */,
@@ -415,6 +427,7 @@
 				EDEBFAFD1FED99E100C771FC /* ft_strmapi.c in Sources */,
 				EDEBFAFF1FED99E100C771FC /* ft_memdel.c in Sources */,
 				EDEBFAE31FED99E100C771FC /* ft_strstr.c in Sources */,
+				EDC446831FF4671900BFC2EC /* ft_rm_list.c in Sources */,
 				EDEBFB011FED99E100C771FC /* ft_abs.c in Sources */,
 				EDEBFB081FED99E100C771FC /* ft_strdup.c in Sources */,
 				EDEBFAF91FED99E100C771FC /* ft_lstdel.c in Sources */,

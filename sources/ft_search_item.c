@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "../includes/libft.h"
+#include "libft.h"
 
 t_item	*ft_search_item(t_ctrl *ctrl, const void *ref, int i,
 						int (*cmp)(const void *cmp, const void *ref))

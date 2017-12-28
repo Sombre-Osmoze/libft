@@ -17,6 +17,7 @@ INC		=	includes/libft.h
 SRC		=	sources/ft_abs.c \
 			sources/ft_atoi.c \
 			sources/ft_bzero.c \
+			sources/ft_clean_list.c \
 			sources/ft_create_item.c \
 			sources/ft_get_item.c \
 			sources/ft_init_ctrl.c \
@@ -53,7 +54,9 @@ SRC		=	sources/ft_abs.c \
 			sources/ft_putnbr_fd.c \
 			sources/ft_putstr.c \
 			sources/ft_putstr_fd.c \
+			sources/ft_rm_ctrl.c \
 			sources/ft_rm_item.c \
+			sources/ft_rm_list.c \
 			sources/ft_search_item.c \
 			sources/ft_strcat.c \
 			sources/ft_strchr.c \
@@ -90,18 +93,19 @@ SRC		=	sources/ft_abs.c \
 			sources/ft_toupper.c \
 
 
+
 CC 		=	clang
 
 OBJS	=	$(SRC:.c=.o)
 
-RM		=		rm -f
+RM		=	rm -f
 
 CFLAGS	=	-Wall -Wextra -Werror
 
 $(NAME)	:	$(OBJS)
 		ar rc $(NAME) $(OBJS) $(INC)
 
-all		:		$(NAME)
+all		:	$(NAME)
 
 clean	:
 		$(RM) $(OBJS)
