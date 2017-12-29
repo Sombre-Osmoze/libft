@@ -28,7 +28,6 @@ typedef struct	s_item
 	void			*content_ref;
 	size_t			content_size;
 	size_t			row;
-
 	struct s_item	*prev;
 	struct s_item	*next;
 	struct s_ctrl	*ctrl;
@@ -49,6 +48,9 @@ t_item			*ft_search_item(t_ctrl *ctrl, const void *ref, int i,
 						int (*cmp)(const void *cmp, const void *ref));
 t_item			*ft_create_item(t_ctrl *ctrl, size_t pos);
 t_item			*ft_rm_item(t_ctrl *ctrl, size_t pos);
+void			ft_clean_list(t_ctrl *ctrl);
+void			ft_rm_list(t_ctrl *ctrl);
+void			ft_rm_ctrl(t_ctrl *ctrl);
 void			*ft_memset(void *b, int c, size_t len);
 void			ft_bzero(void *s, size_t n);
 void			*ft_memcpy(void *dst, const void *src, size_t n);

@@ -22,8 +22,8 @@ void	ft_clean_list(t_ctrl *ctrl)
 		item = ctrl->head;
 		while (item != NULL)
 		{
-			ft_rm_item(ctrl, item->row);
 			item = item->next;
+			ft_rm_item(ctrl, item->prev->row);
 		}
 	}
 }
