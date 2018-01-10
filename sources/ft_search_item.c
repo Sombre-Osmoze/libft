@@ -20,6 +20,8 @@ t_item	*ft_search_item(t_ctrl *ctrl, const void *ref, int i,
 	int		*cont_ref;
 
 	cont_ref = NULL;
+	if (!ctrl || !ctrl->head)
+		return (NULL);
 	tmp = ctrl->head;
 	while (tmp != NULL)
 	{
