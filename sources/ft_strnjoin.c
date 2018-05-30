@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft.h"
+#include "../includes/libft.h"
 
 char	*ft_strnjoin(const char *s1, size_t n1, const char *s2, size_t n2)
 {

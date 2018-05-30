@@ -12,6 +12,7 @@
 
 #include <string.h>
 #include <stdlib.h>
+#include "../includes/libft.h"
 
 char	*ft_strdup(const char *s1)
 {
@@ -22,7 +23,7 @@ char	*ft_strdup(const char *s1)
 	cpy = NULL;
 	while (s1[i] != '\0')
 		i++;
-	cpy = malloc(sizeof(char) * i + 1);
+	cpy = ft_memalloc(sizeof(char) * i + 1);
 	if (cpy != NULL)
 	{
 		i = 0;

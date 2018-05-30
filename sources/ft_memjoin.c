@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft.h"
+#include "../includes/libft.h"
 
 void	*ft_memjoin(void *head, size_t head_size, void *tail, size_t tail_size)
 {

@@ -12,7 +12,7 @@
 
 #include <unistd.h>
 #include <stdlib.h>
-#include "libft.h"
+#include "../includes/libft.h"
 
 void	ft_putendl(const char *s)
 {

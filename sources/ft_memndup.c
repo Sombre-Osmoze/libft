@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_memndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mflorent <mflorent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/29 15:01:08 by mflorent          #+#    #+#             */
-/*   Updated: 2017/11/20 21:20:35 by mflorent         ###   ########.fr       */
+/*   Created: 2018/30/05 01:59:00 by mflorent          #+#    #+#             */
+/*   Updated: 2018/05/30 02:10:13 by mflorent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
 #include <stdlib.h>
+#include "../includes/libft.h"
 
-char	*ft_strsub(const char *s, unsigned int start, size_t len)
-{
-	unsigned int	i;
-	char			*new;
+void *ft_memndup(const void *content, size_t size) {
+
+	unsigned char		*new_content;
+	const unsigned char	*p_content;
+	long				i;
 
 	i = 0;
-	if (s == NULL || (new = (char *)malloc(len * sizeof(char) + 1)) == NULL)
+	if (!content)
 		return (NULL);
-	while (i < len)
-	{
-		new[i] = s[start + i];
-		i++;
+	new_content = ft_memalloc(size + 1);
+	p_content = (const unsigned char *)content;
+	if (new_content) {
+		while (i < size) {
+			new_content[i] = *p_content++;
+			i += 1;
+		}
+		new_content[i] = '\0';
 	}
-	new[i] = '\0';
-	return (new);
+	return (new_content);
 }

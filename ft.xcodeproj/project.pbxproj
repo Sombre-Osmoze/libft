@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED012BCF20BE20F7004DA2C3 /* ft_memndup.c in Sources */ = {isa = PBXBuildFile; fileRef = ED012BCE20BE20F7004DA2C3 /* ft_memndup.c */; };
+		ED012BE920BE3424004DA2C3 /* FunctionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED012BE820BE3424004DA2C3 /* FunctionTests.m */; };
+		ED012BEB20BE3424004DA2C3 /* libft.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDEBF9431FED8A2F00C771FC /* libft.a */; };
 		EDC446811FF4105600BFC2EC /* ft_rm_ctrl.c in Sources */ = {isa = PBXBuildFile; fileRef = EDC446801FF4105600BFC2EC /* ft_rm_ctrl.c */; };
 		EDC446831FF4671900BFC2EC /* ft_rm_list.c in Sources */ = {isa = PBXBuildFile; fileRef = EDC446821FF4671900BFC2EC /* ft_rm_list.c */; };
 		EDC446851FF5120700BFC2EC /* ft_clean_list.c in Sources */ = {isa = PBXBuildFile; fileRef = EDC446841FF5120700BFC2EC /* ft_clean_list.c */; };
@@ -87,7 +90,21 @@
 		EDEBFB131FED99E100C771FC /* ft_strcmp.c in Sources */ = {isa = PBXBuildFile; fileRef = EDEBFAC91FED99E100C771FC /* ft_strcmp.c */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		ED012BEC20BE3424004DA2C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDEBF93B1FED8A2F00C771FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDEBF9421FED8A2F00C771FC;
+			remoteInfo = ft;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		ED012BCE20BE20F7004DA2C3 /* ft_memndup.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_memndup.c; sourceTree = "<group>"; };
+		ED012BE620BE3424004DA2C3 /* FunctionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FunctionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED012BE820BE3424004DA2C3 /* FunctionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FunctionTests.m; sourceTree = "<group>"; };
+		ED012BEA20BE3424004DA2C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED79FD071FEDAF7700EB15A1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		EDC446801FF4105600BFC2EC /* ft_rm_ctrl.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_rm_ctrl.c; sourceTree = "<group>"; };
 		EDC446821FF4671900BFC2EC /* ft_rm_list.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_rm_list.c; sourceTree = "<group>"; };
@@ -175,6 +192,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		ED012BE320BE3424004DA2C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED012BEB20BE3424004DA2C3 /* libft.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EDEBF9401FED8A2F00C771FC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -185,6 +210,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED012BE720BE3424004DA2C3 /* FunctionTests */ = {
+			isa = PBXGroup;
+			children = (
+				ED012BE820BE3424004DA2C3 /* FunctionTests.m */,
+				ED012BEA20BE3424004DA2C3 /* Info.plist */,
+			);
+			path = FunctionTests;
+			sourceTree = "<group>";
+		};
 		ED79FD061FEDAF7700EB15A1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +236,7 @@
 				EDEBFB141FED9A3C00C771FC /* README.md */,
 				EDEBFA7F1FED99E100C771FC /* sources */,
 				EDEBF9E91FED90FB00C771FC /* includes */,
+				ED012BE720BE3424004DA2C3 /* FunctionTests */,
 				ED79FD061FEDAF7700EB15A1 /* Frameworks */,
 				EDEBF9441FED8A2F00C771FC /* Products */,
 			);
@@ -211,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				EDEBF9431FED8A2F00C771FC /* libft.a */,
+				ED012BE620BE3424004DA2C3 /* FunctionTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -303,6 +339,7 @@
 				EDC446801FF4105600BFC2EC /* ft_rm_ctrl.c */,
 				EDC446821FF4671900BFC2EC /* ft_rm_list.c */,
 				EDC446841FF5120700BFC2EC /* ft_clean_list.c */,
+				ED012BCE20BE20F7004DA2C3 /* ft_memndup.c */,
 			);
 			path = sources;
 			sourceTree = "<group>";
@@ -338,6 +375,24 @@
 /* End PBXLegacyTarget section */
 
 /* Begin PBXNativeTarget section */
+		ED012BE520BE3424004DA2C3 /* FunctionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED012BEE20BE3424004DA2C3 /* Build configuration list for PBXNativeTarget "FunctionTests" */;
+			buildPhases = (
+				ED012BE220BE3424004DA2C3 /* Sources */,
+				ED012BE320BE3424004DA2C3 /* Frameworks */,
+				ED012BE420BE3424004DA2C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED012BED20BE3424004DA2C3 /* PBXTargetDependency */,
+			);
+			name = FunctionTests;
+			productName = FunctionTests;
+			productReference = ED012BE620BE3424004DA2C3 /* FunctionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		EDEBF9421FED8A2F00C771FC /* ft */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDEBF9471FED8A2F00C771FC /* Build configuration list for PBXNativeTarget "ft" */;
@@ -361,10 +416,14 @@
 		EDEBF93B1FED8A2F00C771FC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0920;
+				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Marcus Florentin";
 				TargetAttributes = {
+					ED012BE520BE3424004DA2C3 = {
+						CreatedOnToolsVersion = 9.3.1;
+						ProvisioningStyle = Automatic;
+					};
 					EDEBF9421FED8A2F00C771FC = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -389,11 +448,30 @@
 			targets = (
 				EDEBF9421FED8A2F00C771FC /* ft */,
 				EDEBF9E51FED901500C771FC /* libft.a */,
+				ED012BE520BE3424004DA2C3 /* FunctionTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		ED012BE420BE3424004DA2C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		ED012BE220BE3424004DA2C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED012BE920BE3424004DA2C3 /* FunctionTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EDEBF93F1FED8A2F00C771FC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -440,6 +518,7 @@
 				EDEBFAFE1FED99E100C771FC /* ft_strtrim.c in Sources */,
 				EDEBFAF21FED99E100C771FC /* ft_get_item.c in Sources */,
 				EDEBFB041FED99E100C771FC /* ft_memswp.c in Sources */,
+				ED012BCF20BE20F7004DA2C3 /* ft_memndup.c in Sources */,
 				EDEBFAFC1FED99E100C771FC /* ft_strlswp.c in Sources */,
 				EDEBFAE61FED99E100C771FC /* ft_memccpy.c in Sources */,
 				EDEBFADB1FED99E100C771FC /* ft_putnbr_fd.c in Sources */,
@@ -480,7 +559,43 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		ED012BED20BE3424004DA2C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDEBF9421FED8A2F00C771FC /* ft */;
+			targetProxy = ED012BEC20BE3424004DA2C3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		ED012BEF20BE3424004DA2C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Z8Q82L44LS;
+				INFOPLIST_FILE = FunctionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = oz.osmoze.FunctionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ED012BF020BE3424004DA2C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Z8Q82L44LS;
+				INFOPLIST_FILE = FunctionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = oz.osmoze.FunctionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		EDEBF9451FED8A2F00C771FC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -594,7 +709,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z8Q82L44LS;
 				EXECUTABLE_PREFIX = lib;
-				OTHER_CFLAGS = "-Weverything";
+				OTHER_CFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -605,7 +720,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z8Q82L44LS;
 				EXECUTABLE_PREFIX = lib;
-				OTHER_CFLAGS = "";
+				OTHER_CFLAGS = (
+					"-Werror",
+					"-Weverything",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -640,6 +758,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		ED012BEE20BE3424004DA2C3 /* Build configuration list for PBXNativeTarget "FunctionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED012BEF20BE3424004DA2C3 /* Debug */,
+				ED012BF020BE3424004DA2C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EDEBF93E1FED8A2F00C771FC /* Build configuration list for PBXProject "ft" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

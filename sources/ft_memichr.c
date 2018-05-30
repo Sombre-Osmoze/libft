@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <string.h>
-#include "libft.h"
+#include "../includes/libft.h"
 
 size_t	ft_memichr(const void *src, char chr, size_t len)
 {

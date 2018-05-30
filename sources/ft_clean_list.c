@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft.h"
+#include "../includes/../includes/libft.h"
 
 void	ft_clean_list(t_ctrl *ctrl)
 {

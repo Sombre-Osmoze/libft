@@ -12,7 +12,7 @@
 
 #include <string.h>
 #include <stdlib.h>
-#include "libft.h"
+#include "../includes/libft.h"
 
 static int	is_separator(char c, char sep)
 {

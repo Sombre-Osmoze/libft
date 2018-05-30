@@ -44,6 +44,7 @@ SRC		=	sources/ft_abs.c \
 			sources/ft_memicmp.c \
 			sources/ft_memjoin.c \
 			sources/ft_memmove.c \
+			sources/ft_memndup.c \
 			sources/ft_memset.c \
 			sources/ft_memswp.c \
 			sources/ft_putchar.c \
@@ -91,6 +92,7 @@ SRC		=	sources/ft_abs.c \
 			sources/ft_strtrim.c \
 			sources/ft_tolower.c \
 			sources/ft_toupper.c \
+
 
 
 
