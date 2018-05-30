@@ -123,5 +123,6 @@ size_t			ft_abs(long long nb);
 size_t			ft_memichr(const void *src, char chr, size_t len);
 char			*ft_strnjoin(const char *s1, size_t n1,
 													const char *s2, size_t n2);
+void 			*ft_memndup(const void *content, size_t size);
 
 #endif
