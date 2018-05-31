@@ -25,7 +25,7 @@ void *ft_memndup(const void *content, size_t size) {
 	new_content = ft_memalloc(size + 1);
 	p_content = (const unsigned char *)content;
 	if (new_content) {
-		while (i < size) {
+		while (i < (long)size) {
 			new_content[i] = *p_content++;
 			i += 1;
 		}
