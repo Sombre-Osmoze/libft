@@ -13,6 +13,7 @@
 		EDC446811FF4105600BFC2EC /* ft_rm_ctrl.c in Sources */ = {isa = PBXBuildFile; fileRef = EDC446801FF4105600BFC2EC /* ft_rm_ctrl.c */; };
 		EDC446831FF4671900BFC2EC /* ft_rm_list.c in Sources */ = {isa = PBXBuildFile; fileRef = EDC446821FF4671900BFC2EC /* ft_rm_list.c */; };
 		EDC446851FF5120700BFC2EC /* ft_clean_list.c in Sources */ = {isa = PBXBuildFile; fileRef = EDC446841FF5120700BFC2EC /* ft_clean_list.c */; };
+		EDCB854C20C87DB2006877A3 /* ft_longset.c in Sources */ = {isa = PBXBuildFile; fileRef = EDCB854B20C87DB2006877A3 /* ft_longset.c */; };
 		EDEBF9A21FED8A8400C771FC /* libft.h in Headers */ = {isa = PBXBuildFile; fileRef = EDEBF9541FED8A6100C771FC /* libft.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EDEBFACA1FED99E100C771FC /* ft_strncat.c in Sources */ = {isa = PBXBuildFile; fileRef = EDEBFA801FED99E100C771FC /* ft_strncat.c */; };
 		EDEBFACB1FED99E100C771FC /* ft_strnstr.c in Sources */ = {isa = PBXBuildFile; fileRef = EDEBFA811FED99E100C771FC /* ft_strnstr.c */; };
@@ -109,6 +110,7 @@
 		EDC446801FF4105600BFC2EC /* ft_rm_ctrl.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_rm_ctrl.c; sourceTree = "<group>"; };
 		EDC446821FF4671900BFC2EC /* ft_rm_list.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_rm_list.c; sourceTree = "<group>"; };
 		EDC446841FF5120700BFC2EC /* ft_clean_list.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_clean_list.c; sourceTree = "<group>"; };
+		EDCB854B20C87DB2006877A3 /* ft_longset.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_longset.c; sourceTree = "<group>"; };
 		EDEBF9431FED8A2F00C771FC /* libft.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libft.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDEBF9541FED8A6100C771FC /* libft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libft.h; sourceTree = "<group>"; };
 		EDEBF9581FED8A6200C771FC /* libft.fr.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = libft.fr.pdf; sourceTree = "<group>"; };
@@ -340,6 +342,7 @@
 				EDC446821FF4671900BFC2EC /* ft_rm_list.c */,
 				EDC446841FF5120700BFC2EC /* ft_clean_list.c */,
 				ED012BCE20BE20F7004DA2C3 /* ft_memndup.c */,
+				EDCB854B20C87DB2006877A3 /* ft_longset.c */,
 			);
 			path = sources;
 			sourceTree = "<group>";
@@ -550,6 +553,7 @@
 				EDEBFAF81FED99E100C771FC /* ft_memset.c in Sources */,
 				EDEBFB031FED99E100C771FC /* ft_putstr.c in Sources */,
 				EDEBFB0F1FED99E100C771FC /* ft_striter.c in Sources */,
+				EDCB854C20C87DB2006877A3 /* ft_longset.c in Sources */,
 				EDEBFB101FED99E100C771FC /* ft_strsub.c in Sources */,
 				EDEBFACA1FED99E100C771FC /* ft_strncat.c in Sources */,
 				EDEBFAD51FED99E100C771FC /* ft_memcmp.c in Sources */,
@@ -721,8 +725,9 @@
 				DEVELOPMENT_TEAM = Z8Q82L44LS;
 				EXECUTABLE_PREFIX = lib;
 				OTHER_CFLAGS = (
+					"-Wextra",
+					"-Wall",
 					"-Werror",
-					"-Weverything",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

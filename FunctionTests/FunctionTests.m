@@ -56,6 +56,18 @@
 	}
 }
 
+- (void)test_ft_longset {
+
+	long i[3] = { 0, 0, 0 };
+	long value = -1;
+
+	ft_longset(i, value, sizeof(i));
+	for (int y = 0; y <= 2; y++) {
+		XCTAssertEqual(i[y], value);
+	}
+
+}
+
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
     [self measureBlock:^{

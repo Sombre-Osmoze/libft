@@ -28,6 +28,7 @@ SRC		=	sources/ft_abs.c \
 			sources/ft_isdigit.c \
 			sources/ft_isprint.c \
 			sources/ft_itoa.c \
+			sources/ft_longset.c \
 			sources/ft_lstadd.c \
 			sources/ft_lstdel.c \
 			sources/ft_lstdelone.c \
@@ -92,6 +93,7 @@ SRC		=	sources/ft_abs.c \
 			sources/ft_strtrim.c \
 			sources/ft_tolower.c \
 			sources/ft_toupper.c \
+
 
 
 
