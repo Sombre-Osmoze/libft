@@ -23,5 +23,6 @@ void	ft_rm_ctrl(t_ctrl *ctrl)
 		ctrl->tail = NULL;
 		ctrl->last_ac = NULL;
 		free(ctrl);
+
 	}
 }
