@@ -13,8 +13,8 @@
 #include <stdlib.h>
 #include "../includes/libft.h"
 
-void *ft_memndup(const void *content, size_t size) {
-
+void	*ft_memndup(const void *content, size_t size)
+{
 	unsigned char		*new_content;
 	const unsigned char	*p_content;
 	long				i;
@@ -24,8 +24,10 @@ void *ft_memndup(const void *content, size_t size) {
 		return (NULL);
 	new_content = ft_memalloc(size + 1);
 	p_content = (const unsigned char *)content;
-	if (new_content) {
-		while (i < (long)size) {
+	if (new_content)
+	{
+		while (i < (long)size)
+		{
 			new_content[i] = *p_content++;
 			i += 1;
 		}
