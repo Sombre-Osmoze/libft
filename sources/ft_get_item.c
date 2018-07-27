@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <string.h>
 #include "../includes/libft.h"
 
 static t_item	*ft_mv_prev_pos(t_ctrl *c, unsigned long long res[4], size_t ps)
@@ -42,28 +41,38 @@ static t_item	*ft_mv_prev_pos(t_ctrl *c, unsigned long long res[4], size_t ps)
 	return (NULL);
 }
 
+
+/**
+** <#Description#>
+** @param ctrl <#ctrl description#>
+** @param pos <#pos description#>
+** @return <#return value description#>
+*/
+
 t_item			*ft_get_item(t_ctrl *ctrl, size_t pos)
 {
 	unsigned long long	res[4];
 	t_item				*tmp;
 
+	tmp = ctrl->head;
 	if (!ctrl)
 		return (NULL);
 	if (ctrl->nb_item > 15)
-		return (ctrl->head);
-	ft_bzero(res, sizeof(res[0] * 5));
-	if (ctrl->head)
-		res[0] = ft_abs(ctrl->head->row - pos);
-	if (ctrl->tail)
-		res[1] = ft_abs(ctrl->tail->row - pos);
-	if (ctrl->curr && ctrl->curr != ctrl->head && ctrl->curr != ctrl->tail)
-		res[2] = ft_abs(ctrl->curr->row - pos);
-	if (ctrl->last_ac && ctrl->curr != ctrl->head && ctrl->curr != ctrl->tail
-		&& ctrl->curr != ctrl->curr)
-		res[3] = ft_abs(ctrl->last_ac->row - pos);
-	tmp = ft_mv_prev_pos(ctrl, res, pos);
-	if (tmp && tmp->row == pos - 1 && tmp->row - pos > 0)
-		while (tmp && tmp->row == pos - 1)
+	{
+		ft_bzero(res, sizeof(res[0] * 5));
+		if (ctrl->head)
+			res[0] = ft_abs(ctrl->head->row - pos);
+		if (ctrl->tail)
+			res[1] = ft_abs(ctrl->tail->row - pos);
+		if (ctrl->curr && ctrl->curr != ctrl->head && ctrl->curr != ctrl->tail)
+			res[2] = ft_abs(ctrl->curr->row - pos);
+		if (ctrl->last_ac && ctrl->curr != ctrl->head
+			&& ctrl->curr != ctrl->tail && ctrl->curr != ctrl->curr)
+			res[3] = ft_abs(ctrl->last_ac->row - pos);
+		tmp = ft_mv_prev_pos(ctrl, res, pos);
+	}
+	if (tmp && ((tmp->row == pos - 1 && tmp->row - pos > 0) || tmp->row == 0))
+		while (tmp && tmp->row < pos)
 			tmp = tmp->next;
 	else if (tmp && tmp->row == pos - 1 && (long long)(tmp->row - pos) < 0)
 		while (tmp && tmp->row == pos - 1)

@@ -30,9 +30,9 @@ static void	ft_delete_data(t_ctrl *ctrl, t_item *tmp)
 	if (tmp->next)
 		tmp->next->prev = tmp->prev;
 	if (ctrl->head == tmp)
-		ctrl->head = NULL;
+		ctrl->head = tmp->next;
 	if (ctrl->tail == tmp)
-		ctrl->tail = NULL;
+		ctrl->tail = tmp->next;
 	if (ctrl->curr == tmp)
 		ctrl->curr = NULL;
 	ctrl->last_ac = tmp->next;

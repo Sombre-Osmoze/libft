@@ -49,7 +49,7 @@ t_item			*ft_search_item(t_ctrl *ctrl, const void *ref, int i,
 t_item			*ft_create_item(t_ctrl *ctrl, size_t pos);
 t_item			*ft_rm_item(t_ctrl *ctrl, size_t pos);
 void			ft_clean_list(t_ctrl *ctrl);
-void			ft_rm_list(t_ctrl *ctrl);
+void			ft_rm_list(t_ctrl **ctrl);
 void			ft_rm_ctrl(t_ctrl *ctrl);
 void			*ft_memset(void *b, int c, size_t len);
 void			ft_bzero(void *s, size_t n);
@@ -125,5 +125,6 @@ char			*ft_strnjoin(const char *s1, size_t n1,
 													const char *s2, size_t n2);
 void			*ft_memndup(const void *content, size_t size);
 void			ft_longset(long *table, long value, size_t len);
+int				ft_sizet_cmp(const void *cmp, const void *ref);
 
 #endif

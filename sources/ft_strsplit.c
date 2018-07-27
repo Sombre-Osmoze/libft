@@ -53,7 +53,7 @@ char		**ft_strsplit(char const *s, char c)
 	word = 0;
 	if ((str = prepare_str(ft_strdup(s), &len, &word, c)) == NULL)
 		return (NULL);
-	if ((tab = (char **)malloc(sizeof(char *) * (word + 1))) == NULL)
+	if ((tab = (char **)ft_memalloc(sizeof(char *) * (word + 1))) == NULL)
 		return (NULL);
 	word = 0;
 	i = -1;

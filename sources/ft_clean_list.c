@@ -19,11 +19,13 @@ void	ft_clean_list(t_ctrl *ctrl)
 
 	if (ctrl)
 	{
-		item = ctrl->head;
+		item = ctrl->tail;
 		while (item != NULL)
 		{
-			item = item->next;
-			ft_rm_item(ctrl, item->prev->row);
+			ctrl->curr = item;
+			item = item->prev;
+			if (ctrl->curr)
+				ft_rm_item(ctrl, ctrl->curr->row);
 		}
 	}
 }

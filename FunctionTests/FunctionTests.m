@@ -58,15 +58,40 @@
 
 - (void)test_ft_longset {
 
-	long i[3] = { 0, 0, 0 };
+	long i[] = {5, 6, 3};
 	long value = -1;
 
-	ft_longset(i, value, sizeof(i));
-	for (int y = 0; y <= 2; y++) {
+	ft_longset(i, value, 3);
+	for (int y = 0; y < 2; y++) {
 		XCTAssertEqual(i[y], value);
 	}
 
 }
+
+- (void)test_ft_int_cmp {
+
+	int a = 3;
+	int b = 3;
+
+	XCTAssertEqual(ft_int_cmp(&a, &b), 1);
+
+	b = 18;
+
+	XCTAssertEqual(ft_int_cmp(&a, &b), 0);
+}
+
+- (void)test_ft_sizet_cmp {
+
+	size_t a = 3;
+	size_t b = 3;
+
+	XCTAssertEqual(ft_sizet_cmp(&a, &b), 1);
+
+	b = 18;
+
+	XCTAssertEqual(ft_sizet_cmp(&a, &b), 0);
+}
+
 
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
