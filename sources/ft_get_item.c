@@ -19,7 +19,7 @@ static t_item	*ft_mv_prev_pos(t_ctrl *c, unsigned long long res[4], size_t ps)
 	int					i[2];
 
 	tmp = res[0];
-	if (c->nb_item <= 15)
+	if (c->count <= 50)
 		return (c->head);
 	ft_bzero(i, sizeof(i[0] * 2));
 	while (i[0] < 4)
@@ -41,8 +41,7 @@ static t_item	*ft_mv_prev_pos(t_ctrl *c, unsigned long long res[4], size_t ps)
 	return (NULL);
 }
 
-
-/**
+/*
 ** <#Description#>
 ** @param ctrl <#ctrl description#>
 ** @param pos <#pos description#>
@@ -55,9 +54,7 @@ t_item			*ft_get_item(t_ctrl *ctrl, size_t pos)
 	t_item				*tmp;
 
 	tmp = ctrl->head;
-	if (!ctrl)
-		return (NULL);
-	if (ctrl->nb_item > 15)
+	if (ctrl->count > 15)
 	{
 		ft_bzero(res, sizeof(res[0] * 5));
 		if (ctrl->head)

@@ -17,7 +17,7 @@ void	ft_rm_ctrl(t_ctrl *ctrl)
 {
 	if (ctrl)
 	{
-		ctrl->nb_item = 0;
+		ctrl->count = 0;
 		ctrl->curr = NULL;
 		ctrl->head = NULL;
 		ctrl->tail = NULL;

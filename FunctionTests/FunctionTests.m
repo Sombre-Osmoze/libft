@@ -28,12 +28,11 @@
 - (void)test_ft_memndup {
 
 	char *str = "Marcus est le meilleur";
-	long i = 5;
-	char cmp_str[i + 1];
-	char *new_str = ft_memndup(str, i);
+	char cmp_str[sizeof(str) + 1];
+	char *new_str = ft_memndup(str, sizeof(str));
 
 	if (new_str) {
-		for (long y = 0; y < i; y += 1) {
+		for (long y = 0; y < sizeof(str); y += 1) {
 			cmp_str[y] = str[y];
 		}
 		NSString *test = [[NSString alloc] initWithUTF8String:cmp_str];
@@ -73,11 +72,11 @@
 	int a = 3;
 	int b = 3;
 
-	XCTAssertEqual(ft_int_cmp(&a, &b), 1);
+	XCTAssertEqual(ft_int_cmp(&a, &b), 1, "The function says the number are not equal");
 
 	b = 18;
 
-	XCTAssertEqual(ft_int_cmp(&a, &b), 0);
+	XCTAssertEqual(ft_int_cmp(&a, &b), 0, "The function says the number are equal");
 }
 
 - (void)test_ft_sizet_cmp {
@@ -92,6 +91,18 @@
 	XCTAssertEqual(ft_sizet_cmp(&a, &b), 0);
 }
 
+- (void)test_memichr {
+
+	char str[] = "Je suis Marcus";
+
+	size_t res = ft_memichr(str, 's', sizeof(str));
+
+	XCTAssertEqual(3, res);
+
+	res = ft_memichr(str, 'z', sizeof(str));
+
+	XCTAssertEqual(sizeof(str) + 1, res);
+}
 
 - (void)testPerformanceExample {
     // This is an example of a performance test case.

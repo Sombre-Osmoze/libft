@@ -11,6 +11,7 @@
 		ED012BE920BE3424004DA2C3 /* FunctionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED012BE820BE3424004DA2C3 /* FunctionTests.m */; };
 		ED012BEB20BE3424004DA2C3 /* libft.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDEBF9431FED8A2F00C771FC /* libft.a */; };
 		ED03A31E21092A2D00417069 /* ft_sizet_cmp.c in Sources */ = {isa = PBXBuildFile; fileRef = ED03A31D21092A2D00417069 /* ft_sizet_cmp.c */; };
+		ED4267B9217108E700C9C398 /* ft_strndup.c in Sources */ = {isa = PBXBuildFile; fileRef = ED4267B8217108E700C9C398 /* ft_strndup.c */; };
 		EDC446811FF4105600BFC2EC /* ft_rm_ctrl.c in Sources */ = {isa = PBXBuildFile; fileRef = EDC446801FF4105600BFC2EC /* ft_rm_ctrl.c */; };
 		EDC446831FF4671900BFC2EC /* ft_rm_list.c in Sources */ = {isa = PBXBuildFile; fileRef = EDC446821FF4671900BFC2EC /* ft_rm_list.c */; };
 		EDC446851FF5120700BFC2EC /* ft_clean_list.c in Sources */ = {isa = PBXBuildFile; fileRef = EDC446841FF5120700BFC2EC /* ft_clean_list.c */; };
@@ -108,6 +109,7 @@
 		ED012BE820BE3424004DA2C3 /* FunctionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FunctionTests.m; sourceTree = "<group>"; };
 		ED012BEA20BE3424004DA2C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED03A31D21092A2D00417069 /* ft_sizet_cmp.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_sizet_cmp.c; sourceTree = "<group>"; };
+		ED4267B8217108E700C9C398 /* ft_strndup.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_strndup.c; sourceTree = "<group>"; };
 		ED79FD071FEDAF7700EB15A1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		EDC446801FF4105600BFC2EC /* ft_rm_ctrl.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_rm_ctrl.c; sourceTree = "<group>"; };
 		EDC446821FF4671900BFC2EC /* ft_rm_list.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_rm_list.c; sourceTree = "<group>"; };
@@ -329,6 +331,7 @@
 				EDEBFABC1FED99E100C771FC /* ft_strlcat.c */,
 				EDEBFABD1FED99E100C771FC /* ft_search_item.c */,
 				EDEBFABE1FED99E100C771FC /* ft_strdup.c */,
+				ED4267B8217108E700C9C398 /* ft_strndup.c */,
 				EDEBFABF1FED99E100C771FC /* ft_atoi.c */,
 				EDEBFAC01FED99E100C771FC /* ft_memjoin.c */,
 				EDEBFAC11FED99E100C771FC /* ft_memichr.c */,
@@ -511,6 +514,7 @@
 				EDEBFAFD1FED99E100C771FC /* ft_strmapi.c in Sources */,
 				EDEBFAFF1FED99E100C771FC /* ft_memdel.c in Sources */,
 				EDEBFAE31FED99E100C771FC /* ft_strstr.c in Sources */,
+				ED4267B9217108E700C9C398 /* ft_strndup.c in Sources */,
 				EDC446831FF4671900BFC2EC /* ft_rm_list.c in Sources */,
 				EDEBFB011FED99E100C771FC /* ft_abs.c in Sources */,
 				EDEBFB081FED99E100C771FC /* ft_strdup.c in Sources */,

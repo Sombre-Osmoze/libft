@@ -60,6 +60,7 @@ SRC		=	sources/ft_abs.c \
 			sources/ft_rm_item.c \
 			sources/ft_rm_list.c \
 			sources/ft_search_item.c \
+			sources/ft_sizet_cmp.c \
 			sources/ft_strcat.c \
 			sources/ft_strchr.c \
 			sources/ft_strclr.c \
@@ -80,6 +81,7 @@ SRC		=	sources/ft_abs.c \
 			sources/ft_strncat.c \
 			sources/ft_strncmp.c \
 			sources/ft_strncpy.c \
+			sources/ft_strndup.c \
 			sources/ft_strnequ.c \
 			sources/ft_strnew.c \
 			sources/ft_strnjoin.c \
@@ -93,9 +95,6 @@ SRC		=	sources/ft_abs.c \
 			sources/ft_strtrim.c \
 			sources/ft_tolower.c \
 			sources/ft_toupper.c \
-
-
-
 
 
 CC 		=	clang

@@ -52,7 +52,7 @@ t_item		*ft_rm_item(t_ctrl *ctrl, size_t pos)
 		tmp->prev = NULL;
 		tmp->next = NULL;
 		free(tmp);
-		ctrl->nb_item = ctrl->nb_item - 1;
+		ctrl->count = ctrl->count - 1;
 		tmp = ctrl->last_ac;
 		while (tmp != NULL)
 		{

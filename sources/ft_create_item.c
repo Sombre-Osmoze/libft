@@ -24,7 +24,7 @@ static void		ft_set_null(t_ctrl *ctrl, t_item *new, size_t pos)
 	new->next = NULL;
 	new->prev = NULL;
 	ctrl->last_ac = new;
-	ctrl->nb_item += 1;
+	ctrl->count += 1;
 }
 
 static t_item	*ft_spc_creat(t_ctrl *ctrl, size_t pos)
@@ -40,7 +40,7 @@ static t_item	*ft_spc_creat(t_ctrl *ctrl, size_t pos)
 			new_item->next = ctrl->head;
 			ctrl->head->prev = new_item;
 		}
-		else if (ctrl->nb_item - 1 == 0)
+		else if (ctrl->count - 1 == 0)
 			ctrl->tail = new_item;
 		ctrl->head = new_item;
 	}
@@ -60,7 +60,7 @@ t_item			*ft_create_item(t_ctrl *ctrl, size_t pos)
 	t_item	*new_item;
 
 	if (!ctrl)
-		return (NULL);
+		ctrl = ft_init_ctrl();
 	if (pos == 0)
 		new_item = ft_spc_creat(ctrl, pos);
 	else

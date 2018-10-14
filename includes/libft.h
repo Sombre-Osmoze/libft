@@ -35,7 +35,7 @@ typedef struct	s_item
 
 typedef struct	s_ctrl
 {
-	size_t			nb_item;
+	size_t			count;
 	struct s_item	*head;
 	struct s_item	*tail;
 	struct s_item	*curr;
@@ -126,5 +126,6 @@ char			*ft_strnjoin(const char *s1, size_t n1,
 void			*ft_memndup(const void *content, size_t size);
 void			ft_longset(long *table, long value, size_t len);
 int				ft_sizet_cmp(const void *cmp, const void *ref);
+char			*ft_strndup(const char *s1, size_t size);
 
 #endif

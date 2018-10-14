@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnjoin.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mflorent <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mflorent <mflorent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/14 16:03:26 by mflorent          #+#    #+#             */
 /*   Updated: 2017/12/14 16:03:26 by mflorent         ###   ########.fr       */
