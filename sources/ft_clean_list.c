@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "../includes/../includes/libft.h"
+#include "../includes/libft.h"
 
 void	ft_clean_list(t_ctrl *ctrl)
 {
@@ -19,7 +19,7 @@ void	ft_clean_list(t_ctrl *ctrl)
 
 	if (ctrl)
 	{
-		item = ctrl->tail;
+		item = ctrl->last;
 		while (item != NULL)
 		{
 			ctrl->curr = item;

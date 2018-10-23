@@ -12,6 +12,7 @@
 		ED012BEB20BE3424004DA2C3 /* libft.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDEBF9431FED8A2F00C771FC /* libft.a */; };
 		ED03A31E21092A2D00417069 /* ft_sizet_cmp.c in Sources */ = {isa = PBXBuildFile; fileRef = ED03A31D21092A2D00417069 /* ft_sizet_cmp.c */; };
 		ED4267B9217108E700C9C398 /* ft_strndup.c in Sources */ = {isa = PBXBuildFile; fileRef = ED4267B8217108E700C9C398 /* ft_strndup.c */; };
+		ED625ECB217EE17A002E0878 /* ft_item_ref.c in Sources */ = {isa = PBXBuildFile; fileRef = ED625ECA217EE17A002E0878 /* ft_item_ref.c */; };
 		EDC446811FF4105600BFC2EC /* ft_rm_ctrl.c in Sources */ = {isa = PBXBuildFile; fileRef = EDC446801FF4105600BFC2EC /* ft_rm_ctrl.c */; };
 		EDC446831FF4671900BFC2EC /* ft_rm_list.c in Sources */ = {isa = PBXBuildFile; fileRef = EDC446821FF4671900BFC2EC /* ft_rm_list.c */; };
 		EDC446851FF5120700BFC2EC /* ft_clean_list.c in Sources */ = {isa = PBXBuildFile; fileRef = EDC446841FF5120700BFC2EC /* ft_clean_list.c */; };
@@ -110,6 +111,7 @@
 		ED012BEA20BE3424004DA2C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED03A31D21092A2D00417069 /* ft_sizet_cmp.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_sizet_cmp.c; sourceTree = "<group>"; };
 		ED4267B8217108E700C9C398 /* ft_strndup.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_strndup.c; sourceTree = "<group>"; };
+		ED625ECA217EE17A002E0878 /* ft_item_ref.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_item_ref.c; sourceTree = "<group>"; };
 		ED79FD071FEDAF7700EB15A1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		EDC446801FF4105600BFC2EC /* ft_rm_ctrl.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_rm_ctrl.c; sourceTree = "<group>"; };
 		EDC446821FF4671900BFC2EC /* ft_rm_list.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_rm_list.c; sourceTree = "<group>"; };
@@ -349,6 +351,7 @@
 				ED012BCE20BE20F7004DA2C3 /* ft_memndup.c */,
 				EDCB854B20C87DB2006877A3 /* ft_longset.c */,
 				ED03A31D21092A2D00417069 /* ft_sizet_cmp.c */,
+				ED625ECA217EE17A002E0878 /* ft_item_ref.c */,
 			);
 			path = sources;
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 				EDEBFADF1FED99E100C771FC /* ft_bzero.c in Sources */,
 				EDEBFAFA1FED99E100C771FC /* ft_strncmp.c in Sources */,
 				EDEBFADE1FED99E100C771FC /* ft_striteri.c in Sources */,
+				ED625ECB217EE17A002E0878 /* ft_item_ref.c in Sources */,
 				EDC446851FF5120700BFC2EC /* ft_clean_list.c in Sources */,
 				EDEBFAE21FED99E100C771FC /* ft_memcpy.c in Sources */,
 				EDEBFAE81FED99E100C771FC /* ft_isprint.c in Sources */,

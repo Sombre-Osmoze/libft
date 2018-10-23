@@ -27,6 +27,7 @@ SRC		=	sources/ft_abs.c \
 			sources/ft_isascii.c \
 			sources/ft_isdigit.c \
 			sources/ft_isprint.c \
+			sources/ft_item_ref.c \
 			sources/ft_itoa.c \
 			sources/ft_longset.c \
 			sources/ft_lstadd.c \

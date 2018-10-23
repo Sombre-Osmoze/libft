@@ -35,14 +35,14 @@ static t_item	*ft_spc_creat(t_ctrl *ctrl, size_t pos)
 	if (new_item)
 	{
 		ft_set_null(ctrl, new_item, pos);
-		if (ctrl->head)
+		if (ctrl->first)
 		{
-			new_item->next = ctrl->head;
-			ctrl->head->prev = new_item;
+			new_item->next = ctrl->first;
+			ctrl->first->prev = new_item;
 		}
 		else if (ctrl->count - 1 == 0)
-			ctrl->tail = new_item;
-		ctrl->head = new_item;
+			ctrl->last = new_item;
+		ctrl->first = new_item;
 	}
 	return (new_item);
 }
@@ -54,21 +54,21 @@ static t_item	*ft_spc_creat(t_ctrl *ctrl, size_t pos)
 **	@return The poiter to the new item "t_item".
 */
 
-t_item			*ft_create_item(t_ctrl *ctrl, size_t pos)
+t_item			*ft_create_item(t_ctrl **ctrl, size_t pos)
 {
 	t_item	*tmp;
 	t_item	*new_item;
 
-	if (!ctrl)
-		ctrl = ft_init_ctrl();
+	if (!*ctrl)
+		*ctrl = ft_init_ctrl();
 	if (pos == 0)
-		new_item = ft_spc_creat(ctrl, pos);
+		new_item = ft_spc_creat(*ctrl, pos);
 	else
 	{
-		tmp = ft_get_item(ctrl, pos - 1);
+		tmp = ft_get_item(*ctrl, pos - 1);
 		if (tmp == NULL || (new_item = malloc(sizeof(t_item))) == NULL)
 			return (NULL);
-		ft_set_null(ctrl, new_item, pos);
+		ft_set_null(*ctrl, new_item, pos);
 		new_item->prev = tmp;
 		new_item->next = tmp->next;
 		tmp->next = new_item;

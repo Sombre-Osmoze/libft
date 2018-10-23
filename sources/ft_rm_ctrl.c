@@ -13,15 +13,16 @@
 #include <stdlib.h>
 #include "../includes/libft.h"
 
-void	ft_rm_ctrl(t_ctrl *ctrl)
+void	ft_rm_ctrl(t_ctrl **ctrl)
 {
 	if (ctrl)
 	{
-		ctrl->count = 0;
-		ctrl->curr = NULL;
-		ctrl->head = NULL;
-		ctrl->tail = NULL;
-		ctrl->last_ac = NULL;
-		free(ctrl);
+		(*ctrl)->count = 0;
+		(*ctrl)->curr = NULL;
+		(*ctrl)->first = NULL;
+		(*ctrl)->last = NULL;
+		(*ctrl)->last_ac = NULL;
+		free((*ctrl));
+		ctrl = NULL;
 	}
 }

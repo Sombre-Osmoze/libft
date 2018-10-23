@@ -19,8 +19,8 @@ t_ctrl	*ft_init_ctrl(void)
 
 	new_ctrl = malloc(sizeof(t_ctrl));
 	new_ctrl->count = 0;
-	new_ctrl->head = NULL;
-	new_ctrl->tail = NULL;
+	new_ctrl->first = NULL;
+	new_ctrl->last = NULL;
 	new_ctrl->curr = NULL;
 	new_ctrl->last_ac = NULL;
 	return (new_ctrl);

@@ -36,8 +36,8 @@ typedef struct	s_item
 typedef struct	s_ctrl
 {
 	size_t			count;
-	struct s_item	*head;
-	struct s_item	*tail;
+	struct s_item	*first;
+	struct s_item	*last;
 	struct s_item	*curr;
 	struct s_item	*last_ac;
 }				t_ctrl;
@@ -45,12 +45,13 @@ typedef struct	s_ctrl
 t_ctrl			*ft_init_ctrl(void);
 t_item			*ft_get_item(t_ctrl *ctrl, size_t pos);
 t_item			*ft_search_item(t_ctrl *ctrl, const void *ref, int i,
-						int (*cmp)(const void *cmp, const void *ref));
-t_item			*ft_create_item(t_ctrl *ctrl, size_t pos);
+						int (*cmp)(const t_item *item, const void *ref, int i));
+int				ft_item_ref(const t_item *item, const void *ref, int range);
+t_item			*ft_create_item(t_ctrl **ctrl, size_t pos);
 t_item			*ft_rm_item(t_ctrl *ctrl, size_t pos);
 void			ft_clean_list(t_ctrl *ctrl);
 void			ft_rm_list(t_ctrl **ctrl);
-void			ft_rm_ctrl(t_ctrl *ctrl);
+void			ft_rm_ctrl(t_ctrl **ctrl);
 void			*ft_memset(void *b, int c, size_t len);
 void			ft_bzero(void *s, size_t n);
 void			*ft_memcpy(void *dst, const void *src, size_t n);

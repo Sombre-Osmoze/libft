@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rm_list.c                                       :+:      :+:    :+:   */
+/*   ft_item_ref.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mflorent <mflorent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/28/12 00:41:00 by mflorent          #+#    #+#             */
-/*   Updated: 2017/28/12 00:41:00 by mflorent         ###   ########.fr       */
+/*   Created: 2018/23/10 06:56:00 by mflorent          #+#    #+#             */
+/*   Updated: 2018/23/10 06:56:00 by mflorent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "../includes/libft.h"
 
-void	ft_rm_list(t_ctrl **ctrl)
+int	ft_item_ref(const t_item *item, const void *ref, int range)
 {
-	if (ctrl && *ctrl)
-	{
-		ft_clean_list(*ctrl);
-		ft_rm_ctrl(ctrl);
-	}
+	int	*val;
+	int	*item_ref;
+
+	val = (int *)ref;
+	item_ref = (int *)item->content_ref;
+	return (item_ref[range] == val[range]);
 }

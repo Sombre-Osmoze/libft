@@ -101,7 +101,7 @@
 
 	res = ft_memichr(str, 'z', sizeof(str));
 
-	XCTAssertEqual(sizeof(str) + 1, res);
+	XCTAssertEqual(-1, res);
 }
 
 - (void)testPerformanceExample {

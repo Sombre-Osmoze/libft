@@ -30,8 +30,8 @@ char	*ft_strnjoin(const char *s1, size_t n1, const char *s2, size_t n2)
 	}
 	while (i[1] < n2 && s2 && *s2)
 	{
-		*new++ = *s2++;
 		i[1] += 1;
+		*new++ = *s2++;
 	}
 	*new = '\0';
 	return (buff);

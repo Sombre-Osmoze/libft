@@ -20,7 +20,7 @@ static t_item	*ft_mv_prev_pos(t_ctrl *c, unsigned long long res[4], size_t ps)
 
 	tmp = res[0];
 	if (c->count <= 50)
-		return (c->head);
+		return (c->first);
 	ft_bzero(i, sizeof(i[0] * 2));
 	while (i[0] < 4)
 	{
@@ -30,10 +30,10 @@ static t_item	*ft_mv_prev_pos(t_ctrl *c, unsigned long long res[4], size_t ps)
 			i[1]++;
 		}
 	}
-	if (c->head && (i[1] == 0 || c->head->row == ps - 1))
-		return (c->head);
-	if (c->tail && (i[1] == 1 || c->tail->row == ps - 1))
-		return (c->tail);
+	if (c->first && (i[1] == 0 || c->first->row == ps - 1))
+		return (c->first);
+	if (c->last && (i[1] == 1 || c->last->row == ps - 1))
+		return (c->last);
 	if (c->curr && (i[1] == 2 || c->curr->row == ps - 1))
 		return (c->curr);
 	if (c->last_ac && (i[1] == 3 || c->last_ac->row <= ps - 1))
@@ -53,18 +53,18 @@ t_item			*ft_get_item(t_ctrl *ctrl, size_t pos)
 	unsigned long long	res[4];
 	t_item				*tmp;
 
-	tmp = ctrl->head;
+	tmp = ctrl->first;
 	if (ctrl->count > 15)
 	{
 		ft_bzero(res, sizeof(res[0] * 5));
-		if (ctrl->head)
-			res[0] = ft_abs(ctrl->head->row - pos);
-		if (ctrl->tail)
-			res[1] = ft_abs(ctrl->tail->row - pos);
-		if (ctrl->curr && ctrl->curr != ctrl->head && ctrl->curr != ctrl->tail)
+		if (ctrl->first)
+			res[0] = ft_abs(ctrl->first->row - pos);
+		if (ctrl->last)
+			res[1] = ft_abs(ctrl->last->row - pos);
+		if (ctrl->curr && ctrl->curr != ctrl->first && ctrl->curr != ctrl->last)
 			res[2] = ft_abs(ctrl->curr->row - pos);
-		if (ctrl->last_ac && ctrl->curr != ctrl->head
-			&& ctrl->curr != ctrl->tail && ctrl->curr != ctrl->curr)
+		if (ctrl->last_ac && ctrl->curr != ctrl->first
+			&& ctrl->curr != ctrl->last && ctrl->curr != ctrl->curr)
 			res[3] = ft_abs(ctrl->last_ac->row - pos);
 		tmp = ft_mv_prev_pos(ctrl, res, pos);
 	}

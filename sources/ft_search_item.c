@@ -13,19 +13,18 @@
 #include "../includes/libft.h"
 
 t_item	*ft_search_item(t_ctrl *ctrl, const void *ref, int i,
-						int (*cmp)(const void *cmp, const void *ref))
+						int (*cmp)(const t_item *item, const void *ref, int i))
 {
 	t_item	*tmp;
 	int		*cont_ref;
 
 	cont_ref = NULL;
-	if (!ctrl || !ctrl->head)
+	if (!ctrl || !ctrl->first || !ctrl->count)
 		return (NULL);
-	tmp = ctrl->head;
+	tmp = ctrl->first;
 	while (tmp != NULL)
 	{
-		cont_ref = tmp->content_ref;
-		if (cmp(&cont_ref[i], ref))
+		if (cmp(tmp, ref, i))
 		{
 			ctrl->last_ac = tmp;
 			return (tmp);
