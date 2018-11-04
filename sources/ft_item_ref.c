@@ -15,10 +15,10 @@
 
 int	ft_item_ref(const t_item *item, const void *ref, int range)
 {
-	int	*val;
-	int	*item_ref;
+	int		*val;
+	size_t	*item_ref;
 
 	val = (int *)ref;
-	item_ref = (int *)item->content_ref;
-	return (item_ref[range] == val[range]);
+	item_ref = (size_t *)item->content_ref;
+	return (item_ref[range] == (size_t)val[range]);
 }
