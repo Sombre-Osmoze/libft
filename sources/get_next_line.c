@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "../includes/get_next_line.h"
 
 static long	ft_stock_data(int fd, char *rest, t_ctrl **ctrl, long i[3])
 {
