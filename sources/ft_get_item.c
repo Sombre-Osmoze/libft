@@ -54,7 +54,7 @@ t_item			*ft_get_item(t_ctrl *ctrl, size_t pos)
 	t_item				*tmp;
 
 	tmp = ctrl->first;
-	if (ctrl->count > 1000)
+	if (ctrl->count > 1000000)
 	{
 		ft_bzero(res, sizeof(res[0] * 5));
 		if (ctrl->first)
