@@ -13,6 +13,8 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# define ITEM_CALC 0
+
 # include <string.h>
 
 typedef struct	s_list
