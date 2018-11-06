@@ -42,6 +42,8 @@ typedef struct	s_ctrl
 	struct s_item	*last_ac;
 }				t_ctrl;
 
+# include "get_next_line.h"
+
 t_ctrl			*ft_init_ctrl(void);
 t_item			*ft_get_item(t_ctrl *ctrl, size_t pos);
 t_item			*ft_search_item(t_ctrl *ctrl, const void *ref, int i,

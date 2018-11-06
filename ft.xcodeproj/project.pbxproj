@@ -13,6 +13,8 @@
 		ED03A31E21092A2D00417069 /* ft_sizet_cmp.c in Sources */ = {isa = PBXBuildFile; fileRef = ED03A31D21092A2D00417069 /* ft_sizet_cmp.c */; };
 		ED4267B9217108E700C9C398 /* ft_strndup.c in Sources */ = {isa = PBXBuildFile; fileRef = ED4267B8217108E700C9C398 /* ft_strndup.c */; };
 		ED625ECB217EE17A002E0878 /* ft_item_ref.c in Sources */ = {isa = PBXBuildFile; fileRef = ED625ECA217EE17A002E0878 /* ft_item_ref.c */; };
+		ED76E42A2191AFD300A0F45C /* get_next_line.c in Sources */ = {isa = PBXBuildFile; fileRef = ED76E4292191AFD300A0F45C /* get_next_line.c */; };
+		ED76E42C2191B03300A0F45C /* get_next_line.h in Headers */ = {isa = PBXBuildFile; fileRef = ED76E42B2191B03300A0F45C /* get_next_line.h */; };
 		EDC446811FF4105600BFC2EC /* ft_rm_ctrl.c in Sources */ = {isa = PBXBuildFile; fileRef = EDC446801FF4105600BFC2EC /* ft_rm_ctrl.c */; };
 		EDC446831FF4671900BFC2EC /* ft_rm_list.c in Sources */ = {isa = PBXBuildFile; fileRef = EDC446821FF4671900BFC2EC /* ft_rm_list.c */; };
 		EDC446851FF5120700BFC2EC /* ft_clean_list.c in Sources */ = {isa = PBXBuildFile; fileRef = EDC446841FF5120700BFC2EC /* ft_clean_list.c */; };
@@ -112,6 +114,8 @@
 		ED03A31D21092A2D00417069 /* ft_sizet_cmp.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_sizet_cmp.c; sourceTree = "<group>"; };
 		ED4267B8217108E700C9C398 /* ft_strndup.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_strndup.c; sourceTree = "<group>"; };
 		ED625ECA217EE17A002E0878 /* ft_item_ref.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_item_ref.c; sourceTree = "<group>"; };
+		ED76E4292191AFD300A0F45C /* get_next_line.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = get_next_line.c; sourceTree = "<group>"; };
+		ED76E42B2191B03300A0F45C /* get_next_line.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = get_next_line.h; sourceTree = "<group>"; };
 		ED79FD071FEDAF7700EB15A1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		EDC446801FF4105600BFC2EC /* ft_rm_ctrl.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_rm_ctrl.c; sourceTree = "<group>"; };
 		EDC446821FF4671900BFC2EC /* ft_rm_list.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_rm_list.c; sourceTree = "<group>"; };
@@ -262,6 +266,7 @@
 		EDEBF9E91FED90FB00C771FC /* includes */ = {
 			isa = PBXGroup;
 			children = (
+				ED76E42B2191B03300A0F45C /* get_next_line.h */,
 				EDEBF9541FED8A6100C771FC /* libft.h */,
 			);
 			path = includes;
@@ -270,6 +275,7 @@
 		EDEBFA7F1FED99E100C771FC /* sources */ = {
 			isa = PBXGroup;
 			children = (
+				ED76E4292191AFD300A0F45C /* get_next_line.c */,
 				EDEBFA801FED99E100C771FC /* ft_strncat.c */,
 				EDEBFA821FED99E100C771FC /* ft_strswp.c */,
 				EDEBFA831FED99E100C771FC /* ft_lstadd.c */,
@@ -363,6 +369,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED76E42C2191B03300A0F45C /* get_next_line.h in Headers */,
 				EDEBF9A21FED8A8400C771FC /* libft.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -557,6 +564,7 @@
 				EDEBFAED1FED99E100C771FC /* ft_strnequ.c in Sources */,
 				EDEBFB0D1FED99E100C771FC /* ft_lstdelone.c in Sources */,
 				EDEBFAFB1FED99E100C771FC /* ft_strcpy.c in Sources */,
+				ED76E42A2191AFD300A0F45C /* get_next_line.c in Sources */,
 				EDEBFB071FED99E100C771FC /* ft_search_item.c in Sources */,
 				EDEBFADA1FED99E100C771FC /* ft_strsplit.c in Sources */,
 				EDEBFACE1FED99E100C771FC /* ft_isdigit.c in Sources */,

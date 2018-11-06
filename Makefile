@@ -96,6 +96,7 @@ SRC		=	sources/ft_abs.c \
 			sources/ft_strtrim.c \
 			sources/ft_tolower.c \
 			sources/ft_toupper.c \
+			sources/get_next_line.c \
 
 
 CC 		=	clang
