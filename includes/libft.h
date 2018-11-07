@@ -16,6 +16,7 @@
 # define ITEM_CALC 0
 
 # include <string.h>
+# include "get_next_line.h"
 
 typedef struct	s_list
 {
@@ -44,14 +45,12 @@ typedef struct	s_ctrl
 	struct s_item	*last_ac;
 }				t_ctrl;
 
-# include "get_next_line.h"
-
 t_ctrl			*ft_init_ctrl(void);
 t_item			*ft_get_item(t_ctrl *ctrl, size_t pos);
 t_item			*ft_search_item(t_ctrl *ctrl, const void *ref, int i,
 						int (*cmp)(const t_item *item, const void *ref, int i));
 int				ft_item_ref(const t_item *item, const void *ref, int range);
-t_item			*ft_create_item(t_ctrl **ctrl, size_t pos);
+t_item			*ft_create_item(t_ctrl *ctrl, size_t pos);
 t_item			*ft_rm_item(t_ctrl *ctrl, size_t pos);
 void			ft_clean_list(t_ctrl *ctrl);
 void			ft_rm_list(t_ctrl **ctrl);

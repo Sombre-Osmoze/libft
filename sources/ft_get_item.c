@@ -55,7 +55,7 @@ t_item			*ft_get_item(t_ctrl *ctrl, size_t pos)
 
 	tmp = ctrl->first;
 	if (ITEM_CALC && ctrl->count > 1000000)
-	{;
+	{
 		ft_bzero(res, sizeof(res[0] * 5));
 		if (ctrl->first)
 			res[0] = ft_abs(ctrl->first->row - pos);

@@ -12,7 +12,7 @@
 
 #include "../includes/get_next_line.h"
 
-static long	ft_stock_data(int fd, char *rest, t_ctrl **ctrl, long i[3])
+static long	ft_stock_data(int fd, char *rest, t_ctrl *ctrl, long i[3])
 {
 	size_t	*ref;
 
@@ -21,24 +21,24 @@ static long	ft_stock_data(int fd, char *rest, t_ctrl **ctrl, long i[3])
 		ref = ft_memalloc(sizeof(size_t) * 2);
 	else
 		return (i[2]);
-	if (ref && ft_create_item(ctrl, (*ctrl)->count) != NULL)
+	if (ref && ft_create_item(ctrl, ctrl->count) != NULL)
 	{
 		ref[0] = fd;
-		(*ctrl)->last_ac->content_ref = ref;
-		(*ctrl)->last_ac->content = ft_memndup(rest, (size_t)i[0] - i[1] - 1);
-		(*ctrl)->last_ac->content_size = i[0] - i[1] - 1;
+		ctrl->last_ac->content_ref = ref;
+		ctrl->last_ac->content = ft_memndup(rest, (size_t)i[0] - i[1] - 1);
+		ctrl->last_ac->content_size = i[0] - i[1] - 1;
 		return (i[2]);
 	}
 	return (-1);
 }
-#include <stdio.h>
-static long	ft_read_line(const int fd, char **line, t_ctrl **ctrl, long lg)
+
+static long	ft_read_line(const int fd, char **line, t_ctrl *ctrl, long lg)
 {
 	long			i[3];
 	char			tmp[BUFF_SIZE + 1];
 	char			*buff;
 
-	if (lg == -1 || !ctrl || !*ctrl)
+	if (lg == -1 || !ctrl)
 		return (0);
 	ft_longset(i, 0, 3);
 	i[1] = -1;
@@ -101,10 +101,11 @@ int			get_next_line(const int fd, char **line)
 		if (ctrl == NULL)
 			ctrl = ft_init_ctrl();
 		*line = NULL;
-		res = ((int)(ft_get_buff(&fd, line, ctrl, &res) | ft_read_line(fd, line, &ctrl, res)));
+		res = ((int)(ft_get_buff(&fd, line, ctrl, &res)
+				| ft_read_line(fd, line, ctrl, res)));
 		if (res >= 1)
 			return (1);
-		else 
+		else
 			return ((int)res);
 	}
 	return (-1);
