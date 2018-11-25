@@ -10,15 +10,19 @@
 		ED012BCF20BE20F7004DA2C3 /* ft_memndup.c in Sources */ = {isa = PBXBuildFile; fileRef = ED012BCE20BE20F7004DA2C3 /* ft_memndup.c */; };
 		ED012BE920BE3424004DA2C3 /* FunctionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED012BE820BE3424004DA2C3 /* FunctionTests.m */; };
 		ED012BEB20BE3424004DA2C3 /* libft.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDEBF9431FED8A2F00C771FC /* libft.a */; };
+		ED01E2F021A87BAF00211459 /* ft_itoa_base.c in Sources */ = {isa = PBXBuildFile; fileRef = ED01E2EF21A87BAF00211459 /* ft_itoa_base.c */; };
+		ED01E2F221A87C8C00211459 /* ft_strrev.c in Sources */ = {isa = PBXBuildFile; fileRef = ED01E2F121A87C8C00211459 /* ft_strrev.c */; };
+		ED01E2F421A95CEE00211459 /* matrice.c in Sources */ = {isa = PBXBuildFile; fileRef = ED01E2F321A95CEE00211459 /* matrice.c */; };
 		ED03A31E21092A2D00417069 /* ft_sizet_cmp.c in Sources */ = {isa = PBXBuildFile; fileRef = ED03A31D21092A2D00417069 /* ft_sizet_cmp.c */; };
 		ED4267B9217108E700C9C398 /* ft_strndup.c in Sources */ = {isa = PBXBuildFile; fileRef = ED4267B8217108E700C9C398 /* ft_strndup.c */; };
 		ED625ECB217EE17A002E0878 /* ft_item_ref.c in Sources */ = {isa = PBXBuildFile; fileRef = ED625ECA217EE17A002E0878 /* ft_item_ref.c */; };
 		ED76E42A2191AFD300A0F45C /* get_next_line.c in Sources */ = {isa = PBXBuildFile; fileRef = ED76E4292191AFD300A0F45C /* get_next_line.c */; };
-		ED76E42C2191B03300A0F45C /* get_next_line.h in Headers */ = {isa = PBXBuildFile; fileRef = ED76E42B2191B03300A0F45C /* get_next_line.h */; };
+		ED76E42C2191B03300A0F45C /* get_next_line.h in Headers */ = {isa = PBXBuildFile; fileRef = ED76E42B2191B03300A0F45C /* get_next_line.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		EDC446811FF4105600BFC2EC /* ft_rm_ctrl.c in Sources */ = {isa = PBXBuildFile; fileRef = EDC446801FF4105600BFC2EC /* ft_rm_ctrl.c */; };
 		EDC446831FF4671900BFC2EC /* ft_rm_list.c in Sources */ = {isa = PBXBuildFile; fileRef = EDC446821FF4671900BFC2EC /* ft_rm_list.c */; };
 		EDC446851FF5120700BFC2EC /* ft_clean_list.c in Sources */ = {isa = PBXBuildFile; fileRef = EDC446841FF5120700BFC2EC /* ft_clean_list.c */; };
 		EDCB854C20C87DB2006877A3 /* ft_longset.c in Sources */ = {isa = PBXBuildFile; fileRef = EDCB854B20C87DB2006877A3 /* ft_longset.c */; };
+		EDD8365F21A96E58003D4231 /* MatriceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD8365E21A96E58003D4231 /* MatriceTests.m */; };
 		EDEBF9A21FED8A8400C771FC /* libft.h in Headers */ = {isa = PBXBuildFile; fileRef = EDEBF9541FED8A6100C771FC /* libft.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EDEBFACA1FED99E100C771FC /* ft_strncat.c in Sources */ = {isa = PBXBuildFile; fileRef = EDEBFA801FED99E100C771FC /* ft_strncat.c */; };
 		EDEBFACB1FED99E100C771FC /* ft_strnstr.c in Sources */ = {isa = PBXBuildFile; fileRef = EDEBFA811FED99E100C771FC /* ft_strnstr.c */; };
@@ -94,6 +98,9 @@
 		EDEBFB111FED99E100C771FC /* ft_strncpy.c in Sources */ = {isa = PBXBuildFile; fileRef = EDEBFAC71FED99E100C771FC /* ft_strncpy.c */; };
 		EDEBFB121FED99E100C771FC /* ft_tolower.c in Sources */ = {isa = PBXBuildFile; fileRef = EDEBFAC81FED99E100C771FC /* ft_tolower.c */; };
 		EDEBFB131FED99E100C771FC /* ft_strcmp.c in Sources */ = {isa = PBXBuildFile; fileRef = EDEBFAC91FED99E100C771FC /* ft_strcmp.c */; };
+		EDF7204321AAEEA1000E95A0 /* ListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF7204221AAEEA1000E95A0 /* ListTests.m */; };
+		EDF7205A21AAF7D8000E95A0 /* matrice_tools.h in Headers */ = {isa = PBXBuildFile; fileRef = EDF7205821AAF7D8000E95A0 /* matrice_tools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EDF7205B21AAF7D8000E95A0 /* matrice_tools.c in Sources */ = {isa = PBXBuildFile; fileRef = EDF7205921AAF7D8000E95A0 /* matrice_tools.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +118,9 @@
 		ED012BE620BE3424004DA2C3 /* FunctionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FunctionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED012BE820BE3424004DA2C3 /* FunctionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FunctionTests.m; sourceTree = "<group>"; };
 		ED012BEA20BE3424004DA2C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED01E2EF21A87BAF00211459 /* ft_itoa_base.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_itoa_base.c; sourceTree = "<group>"; };
+		ED01E2F121A87C8C00211459 /* ft_strrev.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_strrev.c; sourceTree = "<group>"; };
+		ED01E2F321A95CEE00211459 /* matrice.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = matrice.c; sourceTree = "<group>"; };
 		ED03A31D21092A2D00417069 /* ft_sizet_cmp.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_sizet_cmp.c; sourceTree = "<group>"; };
 		ED4267B8217108E700C9C398 /* ft_strndup.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_strndup.c; sourceTree = "<group>"; };
 		ED625ECA217EE17A002E0878 /* ft_item_ref.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_item_ref.c; sourceTree = "<group>"; };
@@ -121,6 +131,8 @@
 		EDC446821FF4671900BFC2EC /* ft_rm_list.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_rm_list.c; sourceTree = "<group>"; };
 		EDC446841FF5120700BFC2EC /* ft_clean_list.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_clean_list.c; sourceTree = "<group>"; };
 		EDCB854B20C87DB2006877A3 /* ft_longset.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_longset.c; sourceTree = "<group>"; };
+		EDD8365E21A96E58003D4231 /* MatriceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MatriceTests.m; sourceTree = "<group>"; };
+		EDD8366021A96F0A003D4231 /* matrice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = matrice.h; sourceTree = "<group>"; };
 		EDEBF9431FED8A2F00C771FC /* libft.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libft.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDEBF9541FED8A6100C771FC /* libft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libft.h; sourceTree = "<group>"; };
 		EDEBF9581FED8A6200C771FC /* libft.fr.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = libft.fr.pdf; sourceTree = "<group>"; };
@@ -201,6 +213,9 @@
 		EDEBFAC81FED99E100C771FC /* ft_tolower.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ft_tolower.c; sourceTree = "<group>"; };
 		EDEBFAC91FED99E100C771FC /* ft_strcmp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ft_strcmp.c; sourceTree = "<group>"; };
 		EDEBFB141FED9A3C00C771FC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		EDF7204221AAEEA1000E95A0 /* ListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListTests.m; sourceTree = "<group>"; };
+		EDF7205821AAF7D8000E95A0 /* matrice_tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = matrice_tools.h; sourceTree = "<group>"; };
+		EDF7205921AAF7D8000E95A0 /* matrice_tools.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = matrice_tools.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,13 +237,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		ED012BE720BE3424004DA2C3 /* FunctionTests */ = {
+		ED012BE720BE3424004DA2C3 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				EDF7204221AAEEA1000E95A0 /* ListTests.m */,
+				EDD8365E21A96E58003D4231 /* MatriceTests.m */,
 				ED012BE820BE3424004DA2C3 /* FunctionTests.m */,
 				ED012BEA20BE3424004DA2C3 /* Info.plist */,
 			);
-			path = FunctionTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		ED79FD061FEDAF7700EB15A1 /* Frameworks */ = {
@@ -246,9 +263,13 @@
 				EDEBF96E1FED8A6E00C771FC /* Makefile */,
 				EDEBF9581FED8A6200C771FC /* libft.fr.pdf */,
 				EDEBFB141FED9A3C00C771FC /* README.md */,
-				EDEBFA7F1FED99E100C771FC /* sources */,
-				EDEBF9E91FED90FB00C771FC /* includes */,
-				ED012BE720BE3424004DA2C3 /* FunctionTests */,
+				ED76E4292191AFD300A0F45C /* get_next_line.c */,
+				ED76E42B2191B03300A0F45C /* get_next_line.h */,
+				EDEBF9541FED8A6100C771FC /* libft.h */,
+				EDF7205C21AAF8F7000E95A0 /* Functions */,
+				EDF7206221AAFC9D000E95A0 /* Lists */,
+				EDF7205D21AAF92B000E95A0 /* Matrices */,
+				ED012BE720BE3424004DA2C3 /* Tests */,
 				ED79FD061FEDAF7700EB15A1 /* Frameworks */,
 				EDEBF9441FED8A2F00C771FC /* Products */,
 			);
@@ -263,26 +284,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EDEBF9E91FED90FB00C771FC /* includes */ = {
+		EDF7205C21AAF8F7000E95A0 /* Functions */ = {
 			isa = PBXGroup;
 			children = (
-				ED76E42B2191B03300A0F45C /* get_next_line.h */,
-				EDEBF9541FED8A6100C771FC /* libft.h */,
-			);
-			path = includes;
-			sourceTree = "<group>";
-		};
-		EDEBFA7F1FED99E100C771FC /* sources */ = {
-			isa = PBXGroup;
-			children = (
-				ED76E4292191AFD300A0F45C /* get_next_line.c */,
 				EDEBFA801FED99E100C771FC /* ft_strncat.c */,
 				EDEBFA821FED99E100C771FC /* ft_strswp.c */,
 				EDEBFA831FED99E100C771FC /* ft_lstadd.c */,
-				EDEBFA841FED99E100C771FC /* ft_isdigit.c */,
-				EDEBFA851FED99E100C771FC /* ft_create_item.c */,
-				EDEBFA861FED99E100C771FC /* ft_putstr_fd.c */,
 				EDEBFA871FED99E100C771FC /* ft_strequ.c */,
+				EDEBFA841FED99E100C771FC /* ft_isdigit.c */,
+				EDEBFA861FED99E100C771FC /* ft_putstr_fd.c */,
 				EDEBFA811FED99E100C771FC /* ft_strnstr.c */,
 				EDEBFA881FED99E100C771FC /* ft_lstnew.c */,
 				EDEBFA891FED99E100C771FC /* ft_strlen.c */,
@@ -313,7 +323,6 @@
 				EDEBFAA21FED99E100C771FC /* ft_lstmap.c */,
 				EDEBFAA31FED99E100C771FC /* ft_strnequ.c */,
 				EDEBFAA41FED99E100C771FC /* ft_toupper.c */,
-				EDEBFAA51FED99E100C771FC /* ft_rm_item.c */,
 				EDEBFAA61FED99E100C771FC /* ft_putchar.c */,
 				EDEBFAA71FED99E100C771FC /* ft_strrchr.c */,
 				EDEBFAA81FED99E100C771FC /* ft_get_item.c */,
@@ -335,9 +344,7 @@
 				EDEBFAB81FED99E100C771FC /* ft_strnew.c */,
 				EDEBFAB91FED99E100C771FC /* ft_putstr.c */,
 				EDEBFABA1FED99E100C771FC /* ft_memswp.c */,
-				EDEBFABB1FED99E100C771FC /* ft_init_ctrl.c */,
 				EDEBFABC1FED99E100C771FC /* ft_strlcat.c */,
-				EDEBFABD1FED99E100C771FC /* ft_search_item.c */,
 				EDEBFABE1FED99E100C771FC /* ft_strdup.c */,
 				ED4267B8217108E700C9C398 /* ft_strndup.c */,
 				EDEBFABF1FED99E100C771FC /* ft_atoi.c */,
@@ -351,15 +358,39 @@
 				EDEBFAC71FED99E100C771FC /* ft_strncpy.c */,
 				EDEBFAC81FED99E100C771FC /* ft_tolower.c */,
 				EDEBFAC91FED99E100C771FC /* ft_strcmp.c */,
-				EDC446801FF4105600BFC2EC /* ft_rm_ctrl.c */,
-				EDC446821FF4671900BFC2EC /* ft_rm_list.c */,
-				EDC446841FF5120700BFC2EC /* ft_clean_list.c */,
 				ED012BCE20BE20F7004DA2C3 /* ft_memndup.c */,
 				EDCB854B20C87DB2006877A3 /* ft_longset.c */,
 				ED03A31D21092A2D00417069 /* ft_sizet_cmp.c */,
-				ED625ECA217EE17A002E0878 /* ft_item_ref.c */,
+				ED01E2EF21A87BAF00211459 /* ft_itoa_base.c */,
+				ED01E2F121A87C8C00211459 /* ft_strrev.c */,
 			);
-			path = sources;
+			path = Functions;
+			sourceTree = "<group>";
+		};
+		EDF7205D21AAF92B000E95A0 /* Matrices */ = {
+			isa = PBXGroup;
+			children = (
+				ED01E2F321A95CEE00211459 /* matrice.c */,
+				EDD8366021A96F0A003D4231 /* matrice.h */,
+				EDF7205921AAF7D8000E95A0 /* matrice_tools.c */,
+				EDF7205821AAF7D8000E95A0 /* matrice_tools.h */,
+			);
+			path = Matrices;
+			sourceTree = "<group>";
+		};
+		EDF7206221AAFC9D000E95A0 /* Lists */ = {
+			isa = PBXGroup;
+			children = (
+				EDEBFA851FED99E100C771FC /* ft_create_item.c */,
+				EDEBFAA51FED99E100C771FC /* ft_rm_item.c */,
+				EDEBFABB1FED99E100C771FC /* ft_init_ctrl.c */,
+				EDEBFABD1FED99E100C771FC /* ft_search_item.c */,
+				EDC446801FF4105600BFC2EC /* ft_rm_ctrl.c */,
+				EDC446821FF4671900BFC2EC /* ft_rm_list.c */,
+				ED625ECA217EE17A002E0878 /* ft_item_ref.c */,
+				EDC446841FF5120700BFC2EC /* ft_clean_list.c */,
+			);
+			path = Lists;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,6 +401,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED76E42C2191B03300A0F45C /* get_next_line.h in Headers */,
+				EDF7205A21AAF7D8000E95A0 /* matrice_tools.h in Headers */,
 				EDEBF9A21FED8A8400C771FC /* libft.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,7 +519,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDF7204321AAEEA1000E95A0 /* ListTests.m in Sources */,
 				ED012BE920BE3424004DA2C3 /* FunctionTests.m in Sources */,
+				EDD8365F21A96E58003D4231 /* MatriceTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +540,7 @@
 				EDEBFAE21FED99E100C771FC /* ft_memcpy.c in Sources */,
 				EDEBFAE81FED99E100C771FC /* ft_isprint.c in Sources */,
 				EDEBFAF41FED99E100C771FC /* ft_memchr.c in Sources */,
+				ED01E2F421A95CEE00211459 /* matrice.c in Sources */,
 				EDEBFAD21FED99E100C771FC /* ft_lstnew.c in Sources */,
 				EDEBFB131FED99E100C771FC /* ft_strcmp.c in Sources */,
 				EDEBFAEB1FED99E100C771FC /* ft_strdel.c in Sources */,
@@ -535,6 +570,7 @@
 				EDEBFB111FED99E100C771FC /* ft_strncpy.c in Sources */,
 				EDEBFAD01FED99E100C771FC /* ft_putstr_fd.c in Sources */,
 				EDEBFAD41FED99E100C771FC /* ft_strnjoin.c in Sources */,
+				EDF7205B21AAF7D8000E95A0 /* matrice_tools.c in Sources */,
 				EDEBFAE71FED99E100C771FC /* ft_strcat.c in Sources */,
 				EDEBFAFE1FED99E100C771FC /* ft_strtrim.c in Sources */,
 				EDEBFAF21FED99E100C771FC /* ft_get_item.c in Sources */,
@@ -542,6 +578,7 @@
 				ED012BCF20BE20F7004DA2C3 /* ft_memndup.c in Sources */,
 				EDEBFAFC1FED99E100C771FC /* ft_strlswp.c in Sources */,
 				EDEBFAE61FED99E100C771FC /* ft_memccpy.c in Sources */,
+				ED01E2F021A87BAF00211459 /* ft_itoa_base.c in Sources */,
 				EDEBFADB1FED99E100C771FC /* ft_putnbr_fd.c in Sources */,
 				EDEBFAF71FED99E100C771FC /* ft_putchar_fd.c in Sources */,
 				EDEBFB001FED99E100C771FC /* ft_memmove.c in Sources */,
@@ -575,6 +612,7 @@
 				EDEBFB0F1FED99E100C771FC /* ft_striter.c in Sources */,
 				EDCB854C20C87DB2006877A3 /* ft_longset.c in Sources */,
 				EDEBFB101FED99E100C771FC /* ft_strsub.c in Sources */,
+				ED01E2F221A87C8C00211459 /* ft_strrev.c in Sources */,
 				EDEBFACA1FED99E100C771FC /* ft_strncat.c in Sources */,
 				EDEBFAD51FED99E100C771FC /* ft_memcmp.c in Sources */,
 				EDEBFB0A1FED99E100C771FC /* ft_memjoin.c in Sources */,
@@ -599,7 +637,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = Z8Q82L44LS;
-				INFOPLIST_FILE = FunctionTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = oz.osmoze.FunctionTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -613,7 +651,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = Z8Q82L44LS;
-				INFOPLIST_FILE = FunctionTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = oz.osmoze.FunctionTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
