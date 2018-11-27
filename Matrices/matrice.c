@@ -12,7 +12,7 @@
 
 #include "matrice.h"
 
-/**
+/*
 ** This function initialise the matrice with the given dimension
 **
 ** @param rows The number of rows
@@ -34,8 +34,8 @@ t_ctrl	*init_matrice(size_t rows, size_t columns)
 		num = ft_create_item(matrice, 0);
 		if (num == NULL)
 			return (NULL);
-		num->content = matrice_coord(coord.row, coord.column);
-		num->content_size = sizeof(t_matrice_coord *);
+		num->content = matrice_value(NULL, coord);
+		num->content_size = 0;
 		if (coord.column < columns)
 			num->content_ref = ft_get_item(matrice, columns);
 		if (coord.column == 1) 
@@ -44,4 +44,30 @@ t_ctrl	*init_matrice(size_t rows, size_t columns)
 			coord.column -= 1;
 	}
 	return (matrice);
+}
+
+t_matrice_value	*m_get_value(t_ctrl *matrice, t_matrice_coord coord)
+{
+	t_item			*item;
+	t_matrice_coord	*size;
+
+
+	size = (t_matrice_coord *)(matrice->info);
+	if (coord.row <= size->row && coord.column <= size->column)
+	{
+		item = matrice->first;
+		while (<#condition#>)
+			item = (t_item *)item->content_ref;
+		while (<#condition#>)
+			item = item->next;
+		return ((t_matrice_value *)(item->content));
+	}
+	else
+		return (NULL);
+}
+
+t_item	*m_set_value(t_ctrl	*matrice, t_matrice_value *value)
+{
+	// TODO: Implementation de la fonction à faire.
+	return (NULL);
 }
