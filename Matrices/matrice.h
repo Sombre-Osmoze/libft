@@ -26,6 +26,6 @@
 */
 t_ctrl			*init_matrice(size_t rows, size_t columns);
 t_matrice_value	*m_get_value(t_ctrl *matrice, t_matrice_coord coord);
-t_item			*m_set_value(t_ctrl	*matrice, t_matrice_value *value);
+t_item			*m_set_value(t_ctrl	*matrice, t_matrice_value value);
 
 #endif

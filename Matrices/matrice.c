@@ -46,19 +46,18 @@ t_ctrl	*init_matrice(size_t rows, size_t columns)
 	return (matrice);
 }
 
-t_matrice_value	*m_get_value(t_ctrl *matrice, t_matrice_coord coord)
+t_matrice_value	*m_get_value(t_ctrl *matrice, t_matrice_coord crd)
 {
 	t_item			*item;
 	t_matrice_coord	*size;
 
-
 	size = (t_matrice_coord *)(matrice->info);
-	if (coord.row <= size->row && coord.column <= size->column)
+	if (crd.row <= size->row && crd.column <= size->column)
 	{
 		item = matrice->first;
-		while (<#condition#>)
+		while (((t_matrice_value *)(item->content))->coord.row == crd.row)
 			item = (t_item *)item->content_ref;
-		while (<#condition#>)
+		while (((t_matrice_value *)(item->content))->coord.column == crd.column)
 			item = item->next;
 		return ((t_matrice_value *)(item->content));
 	}
@@ -66,8 +65,21 @@ t_matrice_value	*m_get_value(t_ctrl *matrice, t_matrice_coord coord)
 		return (NULL);
 }
 
-t_item	*m_set_value(t_ctrl	*matrice, t_matrice_value *value)
+t_item	*m_set_value(t_ctrl	*matrice, t_matrice_value value)
 {
-	// TODO: Implementation de la fonction à faire.
+	t_item			*item;
+	t_matrice_coord	*size;
+
+	size = (t_matrice_coord *)(matrice->info);
+	if (value.coord.row <= size->row && value.coord.column <= size->column)
+	{
+		item = matrice->first;
+		while (((t_matrice_value *)(item->content))->coord.row == value.coord.row)
+			item = (t_item *)item->content_ref;
+		while (((t_matrice_value *)(item->content))->coord.column == value.coord.column)
+			item = item->next;
+		(*(t_matrice_value *)(item->content)) = value;
+		return (item);
+	}
 	return (NULL);
 }
