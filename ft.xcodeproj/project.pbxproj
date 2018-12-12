@@ -18,6 +18,8 @@
 		ED625ECB217EE17A002E0878 /* ft_item_ref.c in Sources */ = {isa = PBXBuildFile; fileRef = ED625ECA217EE17A002E0878 /* ft_item_ref.c */; };
 		ED76E42A2191AFD300A0F45C /* get_next_line.c in Sources */ = {isa = PBXBuildFile; fileRef = ED76E4292191AFD300A0F45C /* get_next_line.c */; };
 		ED76E42C2191B03300A0F45C /* get_next_line.h in Headers */ = {isa = PBXBuildFile; fileRef = ED76E42B2191B03300A0F45C /* get_next_line.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		ED88541C21B839E900D13D0D /* matrice_math.h in Headers */ = {isa = PBXBuildFile; fileRef = ED88541A21B839E900D13D0D /* matrice_math.h */; };
+		ED88541D21B839E900D13D0D /* matrice_math.c in Sources */ = {isa = PBXBuildFile; fileRef = ED88541B21B839E900D13D0D /* matrice_math.c */; };
 		EDC446811FF4105600BFC2EC /* ft_rm_ctrl.c in Sources */ = {isa = PBXBuildFile; fileRef = EDC446801FF4105600BFC2EC /* ft_rm_ctrl.c */; };
 		EDC446831FF4671900BFC2EC /* ft_rm_list.c in Sources */ = {isa = PBXBuildFile; fileRef = EDC446821FF4671900BFC2EC /* ft_rm_list.c */; };
 		EDC446851FF5120700BFC2EC /* ft_clean_list.c in Sources */ = {isa = PBXBuildFile; fileRef = EDC446841FF5120700BFC2EC /* ft_clean_list.c */; };
@@ -127,6 +129,8 @@
 		ED76E4292191AFD300A0F45C /* get_next_line.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = get_next_line.c; sourceTree = "<group>"; };
 		ED76E42B2191B03300A0F45C /* get_next_line.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = get_next_line.h; sourceTree = "<group>"; };
 		ED79FD071FEDAF7700EB15A1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		ED88541A21B839E900D13D0D /* matrice_math.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = matrice_math.h; sourceTree = "<group>"; };
+		ED88541B21B839E900D13D0D /* matrice_math.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = matrice_math.c; sourceTree = "<group>"; };
 		EDC446801FF4105600BFC2EC /* ft_rm_ctrl.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_rm_ctrl.c; sourceTree = "<group>"; };
 		EDC446821FF4671900BFC2EC /* ft_rm_list.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_rm_list.c; sourceTree = "<group>"; };
 		EDC446841FF5120700BFC2EC /* ft_clean_list.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_clean_list.c; sourceTree = "<group>"; };
@@ -374,6 +378,8 @@
 				EDD8366021A96F0A003D4231 /* matrice.h */,
 				EDF7205921AAF7D8000E95A0 /* matrice_tools.c */,
 				EDF7205821AAF7D8000E95A0 /* matrice_tools.h */,
+				ED88541A21B839E900D13D0D /* matrice_math.h */,
+				ED88541B21B839E900D13D0D /* matrice_math.c */,
 			);
 			path = Matrices;
 			sourceTree = "<group>";
@@ -402,6 +408,7 @@
 			files = (
 				ED76E42C2191B03300A0F45C /* get_next_line.h in Headers */,
 				EDF7205A21AAF7D8000E95A0 /* matrice_tools.h in Headers */,
+				ED88541C21B839E900D13D0D /* matrice_math.h in Headers */,
 				EDEBF9A21FED8A8400C771FC /* libft.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -558,6 +565,7 @@
 				EDEBFAE41FED99E100C771FC /* ft_memalloc.c in Sources */,
 				EDEBFB021FED99E100C771FC /* ft_strnew.c in Sources */,
 				EDEBFAFD1FED99E100C771FC /* ft_strmapi.c in Sources */,
+				ED88541D21B839E900D13D0D /* matrice_math.c in Sources */,
 				EDEBFAFF1FED99E100C771FC /* ft_memdel.c in Sources */,
 				EDEBFAE31FED99E100C771FC /* ft_strstr.c in Sources */,
 				ED4267B9217108E700C9C398 /* ft_strndup.c in Sources */,

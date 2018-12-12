@@ -1,30 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rm_ctrl.c                                       :+:      :+:    :+:   */
+/*   matrice_math.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mflorent <mflorent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/27/12 18:31:00 by mflorent          #+#    #+#             */
-/*   Updated: 2017/27/12 18:31:00 by mflorent         ###   ########.fr       */
+/*   Created: 2018/05/12 17:52:00 by mflorent          #+#    #+#             */
+/*   Updated: 2018/05/12 17:52:00 by mflorent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "../libft.h"
+#ifndef MATRICE_MATH_H
+# define MATRICE_MATH_H
 
-void	ft_rm_ctrl(t_ctrl **ctrl)
-{
-	if (ctrl)
-	{
-		(*ctrl)->count = 0;
-		(*ctrl)->curr = NULL;
-		(*ctrl)->first = NULL;
-		(*ctrl)->last = NULL;
-		(*ctrl)->last_ac = NULL;
-		(*ctrl)->info = NULL;
-		free((*ctrl)->info);
-		free((*ctrl));
-		ctrl = NULL;
-	}
-}
+# include "matrice.h"
+
+
+#endif

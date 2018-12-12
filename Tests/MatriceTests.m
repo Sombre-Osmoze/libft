@@ -39,8 +39,10 @@
 		place = place->next;
 	}
 
-	if (matrice)
+	if (matrice) {
 		XCTAssertEqual(matrice->count, size.row * size.column);
+		m_print(matrice);
+	}
 	else
 		XCTFail("Can't create matrice");
 }

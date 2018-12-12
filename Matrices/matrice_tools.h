@@ -24,12 +24,13 @@ typedef struct	s_matrice_coord
 
 typedef struct	s_matrice_value
 {
-	void			*value;
+	double			value;
 	t_matrice_coord	coord;
 
 }				t_matrice_value;
 
 t_matrice_coord	*matrice_coord(size_t row, size_t column);
-t_matrice_value	*matrice_value(void	*number, t_matrice_coord coord);
+t_matrice_value	*matrice_value(double number, t_matrice_coord coord);
+void			m_print(t_ctrl *matrice);
 
 #endif

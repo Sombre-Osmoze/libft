@@ -22,7 +22,7 @@ t_matrice_coord	*matrice_coord(size_t row, size_t column)
 	return (coord);
 }
 
-t_matrice_value	*matrice_value(void	*number, t_matrice_coord coord)
+t_matrice_value	*matrice_value(double number, t_matrice_coord coord)
 {
 	t_matrice_value	*value;
 
@@ -45,7 +45,7 @@ void	m_print(t_ctrl *matrice)
 	while (item)
 	{
 		value = (t_matrice_value *)item->content;
-//		display = ft_strcpy(display, ft_itoa_base(<#int value#>, <#int base#>))
+		display = ft_strcpy(display, ft_itoa_base((int)(value->value), 10));
 		if (value->coord.column == 1)
 			display = ft_strcpy(display, "| ");
 		else if (value->coord.column == size->column)

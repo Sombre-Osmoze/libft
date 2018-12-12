@@ -20,7 +20,7 @@
 ** @return The pointer to the matrice
 */
 
-t_ctrl	*init_matrice(size_t rows, size_t columns)
+t_ctrl	*init_matrice(const size_t rows, const size_t columns)
 {
 	t_ctrl			*matrice;
 	t_item			*num;
@@ -28,23 +28,57 @@ t_ctrl	*init_matrice(size_t rows, size_t columns)
 
 	matrice = ft_init_ctrl();
 	matrice->info = matrice_coord(rows, columns);
-	coord = (t_matrice_coord){ rows, columns };
+	coord = *(t_matrice_coord *)(matrice->info);
 	while (matrice && coord.row > 0)
 	{
 		num = ft_create_item(matrice, 0);
 		if (num == NULL)
-			return (NULL);
-		num->content = matrice_value(NULL, coord);
-		num->content_size = 0;
-		if (coord.column < columns)
-			num->content_ref = ft_get_item(matrice, columns);
-		if (coord.column == 1) 
-			coord = (t_matrice_coord){ coord.row -1, columns };
+			ft_rm_ctrl(&matrice);
 		else
-			coord.column -= 1;
+		{
+			num->content = matrice_value(0, coord);
+			num->content_size = sizeof(t_matrice_value);
+			if (coord.column < columns)
+				num->content_ref = ft_get_item(matrice, columns);
+			if (coord.column == 1)
+				coord = (t_matrice_coord){ coord.row -1, columns };
+			else
+				coord.column -= 1;
+		}
 	}
 	return (matrice);
 }
+
+t_ctrl	*init_matrice_unity(size_t rows, size_t columns)
+{
+	t_ctrl			*matrice;
+	t_item			*num;
+	t_matrice_coord	crd;
+
+	matrice = ft_init_ctrl();
+	matrice->info = matrice_coord(rows, columns);
+	crd = *(t_matrice_coord *)(matrice->info);;
+	while (matrice && crd.row > 0)
+	{
+		num = ft_create_item(matrice, 0);
+		if (num == NULL)
+			ft_rm_ctrl(&matrice);
+		else
+		{
+			num->content = matrice_value((double)(crd.column == crd.row), crd);
+			num->content_size = sizeof(t_matrice_value);
+			if (crd.column < columns)
+				num->content_ref = ft_get_item(matrice, columns);
+			if (crd.column == 1)
+				crd = (t_matrice_coord){ crd.row -1, columns };
+			else
+				crd.column -= 1;
+		}
+	}
+	return (matrice);
+}
+
+
 
 t_matrice_value	*m_get_value(t_ctrl *matrice, t_matrice_coord crd)
 {
