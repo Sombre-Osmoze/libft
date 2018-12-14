@@ -15,5 +15,6 @@
 
 # include "matrice.h"
 
+t_ctrl	*matrice_factor(t_ctrl *m_one, t_ctrl *m_two, int store[2]);
 
 #endif

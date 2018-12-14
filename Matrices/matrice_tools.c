@@ -40,7 +40,7 @@ void	m_print(t_ctrl *matrice)
 	t_matrice_value *value;
 
 	size = (t_matrice_coord *)(matrice->info);
-	display = ft_memalloc(((size->column * 2) +  4) *size->row);
+	display = ft_memalloc(((size->column * 2) +  4) * size->row);
 	item = matrice->first;
 	while (item)
 	{
@@ -56,10 +56,10 @@ void	m_print(t_ctrl *matrice)
 	free(display);
 }
 
-//
-// | 0 0 0 0 |
-// | 0 0 0 0 |
-// | 0 0 0 0 |
-// | 0 0 0 0 |
-// | 0 0 0 0 |
-//
+/*
+** | 0 0 0 0 |
+** | 0 0 0 0 |
+** | 0 0 0 0 |
+** | 0 0 0 0 |
+** | 0 0 0 0 |
+*/
