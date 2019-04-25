@@ -378,8 +378,8 @@
 				EDD8366021A96F0A003D4231 /* matrice.h */,
 				EDF7205921AAF7D8000E95A0 /* matrice_tools.c */,
 				EDF7205821AAF7D8000E95A0 /* matrice_tools.h */,
-				ED88541A21B839E900D13D0D /* matrice_math.h */,
 				ED88541B21B839E900D13D0D /* matrice_math.c */,
+				ED88541A21B839E900D13D0D /* matrice_math.h */,
 			);
 			path = Matrices;
 			sourceTree = "<group>";

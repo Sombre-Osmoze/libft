@@ -36,7 +36,7 @@ void	m_print(t_ctrl *matrice)
 {
 	char			*display;
 	t_matrice_coord	*size;
-	t_item			*item;
+	t_case			*item;
 	t_matrice_value *value;
 
 	size = (t_matrice_coord *)(matrice->info);

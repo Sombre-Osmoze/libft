@@ -20,10 +20,10 @@
 ** @return The pointer to the matrice
 */
 
-t_ctrl	*init_matrice(const size_t rows, const size_t columns)
+t_matrix	*init_matrice(const size_t rows, const size_t columns)
 {
-	t_ctrl			*matrice;
-	t_item			*num;
+	t_matrix			*matrice;
+	t_case			*num;
 	t_matrice_coord	coord;
 
 	matrice = ft_init_ctrl();
@@ -49,10 +49,10 @@ t_ctrl	*init_matrice(const size_t rows, const size_t columns)
 	return (matrice);
 }
 
-t_ctrl	*init_matrice_unity(size_t rows, size_t columns)
+t_matrix	*init_matrice_unity(const size_t rows, const size_t columns)
 {
-	t_ctrl			*matrice;
-	t_item			*num;
+	t_matrix		*matrice;
+	t_case			*num;
 	t_matrice_coord	crd;
 
 	matrice = ft_init_ctrl();
@@ -80,9 +80,9 @@ t_ctrl	*init_matrice_unity(size_t rows, size_t columns)
 
 
 
-t_matrice_value	*m_get_value(t_ctrl *matrice, t_matrice_coord crd)
+t_matrice_value	*m_get_value(const t_matrix *matrice, const t_matrice_coord crd)
 {
-	t_item			*item;
+	t_case			*item;
 	t_matrice_coord	*size;
 
 	size = (t_matrice_coord *)(matrice->info);
@@ -90,7 +90,7 @@ t_matrice_value	*m_get_value(t_ctrl *matrice, t_matrice_coord crd)
 	{
 		item = matrice->first;
 		while (((t_matrice_value *)(item->content))->coord.row == crd.row)
-			item = (t_item *)item->content_ref;
+			item = (t_case *)item->content_ref;
 		while (((t_matrice_value *)(item->content))->coord.column == crd.column)
 			item = item->next;
 		return ((t_matrice_value *)(item->content));
@@ -99,9 +99,9 @@ t_matrice_value	*m_get_value(t_ctrl *matrice, t_matrice_coord crd)
 		return (NULL);
 }
 
-t_item	*m_set_value(t_ctrl	*matrice, t_matrice_value value)
+t_case	*m_set_value(const t_ctrl *matrice, const t_matrice_value value)
 {
-	t_item			*item;
+	t_case			*item;
 	t_matrice_coord	*size;
 
 	size = (t_matrice_coord *)(matrice->info);
@@ -109,7 +109,7 @@ t_item	*m_set_value(t_ctrl	*matrice, t_matrice_value value)
 	{
 		item = matrice->first;
 		while (((t_matrice_value *)(item->content))->coord.row == value.coord.row)
-			item = (t_item *)item->content_ref;
+			item = (t_case *)item->content_ref;
 		while (((t_matrice_value *)(item->content))->coord.column == value.coord.column)
 			item = item->next;
 		(*(t_matrice_value *)(item->content)) = value;

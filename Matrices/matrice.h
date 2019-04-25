@@ -15,7 +15,23 @@
 
 # include <stdlib.h>
 # include "../libft.h"
-# include "matrice_tools.h"
+
+typedef t_item t_case;
+
+typedef t_ctrl t_matrix;
+
+typedef struct	s_matrice_coord
+{
+	size_t		row;
+	size_t		column;
+}				t_matrice_coord;
+
+typedef struct	s_matrice_value
+{
+	double			value;
+	t_matrice_coord	coord;
+
+}				t_matrice_value;
 
 /**
 ** This function initialise the matrice with the given dimension
@@ -24,8 +40,8 @@
 ** @param columns The number of columns
 ** @return The pointer to the matrice
 */
-t_ctrl			*init_matrice(size_t rows, size_t columns);
-t_matrice_value	*m_get_value(t_ctrl *matrice, t_matrice_coord coord);
-t_item			*m_set_value(t_ctrl	*matrice, t_matrice_value value);
+t_matrix		*init_matrice(const size_t rows, const size_t columns);
+t_matrice_value	*m_get_value(const t_matrix *matrice, const t_matrice_coord coord);
+t_case			*m_set_value(const t_matrix *matrice, const t_matrice_value value);
 
 #endif
